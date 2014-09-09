@@ -10,7 +10,7 @@ def show_products_page
 	if (@category == 'Books')
 		redirect_to book_show_path(params[:product_id])
 	elsif (@category == 'Games')
-		redirect_to game_show_path([:product_id])
+		redirect_to game_show_path(params[:product_id])
 	end
 	
 	

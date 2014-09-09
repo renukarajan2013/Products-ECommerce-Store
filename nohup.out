@@ -62538,3 +62538,3164 @@ Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-09
 
 
 Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-09-09 08:56:55 -0500
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-09-09 08:56:55 -0500
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-09-09 08:56:55 -0500
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-09-09 08:56:55 -0500
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-09-09 08:56:55 -0500
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-09-09 08:56:55 -0500
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-09-09 08:56:55 -0500
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-09-09 08:56:55 -0500
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-09-09 08:56:55 -0500
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-09 08:56:55 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-09 08:56:55 -0500
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2014-09-09 08:56:55 -0500
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-09-09 08:56:55 -0500
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-09 08:56:55 -0500
+
+
+Started GET "/assets/browse.js?body=1" for 127.0.0.1 at 2014-09-09 08:56:55 -0500
+
+
+Started GET "/assets/cart.js?body=1" for 127.0.0.1 at 2014-09-09 08:56:55 -0500
+
+
+Started GET "/assets/careers.js?body=1" for 127.0.0.1 at 2014-09-09 08:56:55 -0500
+
+
+Started GET "/assets/cart_items.js?body=1" for 127.0.0.1 at 2014-09-09 08:56:55 -0500
+
+
+Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2014-09-09 08:56:55 -0500
+
+
+Started GET "/assets/games.js?body=1" for 127.0.0.1 at 2014-09-09 08:56:55 -0500
+
+
+Started GET "/assets/mycart.js?body=1" for 127.0.0.1 at 2014-09-09 08:56:55 -0500
+
+
+Started GET "/assets/order.js?body=1" for 127.0.0.1 at 2014-09-09 08:56:55 -0500
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-09-09 08:56:55 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-09-09 08:56:55 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-09 08:56:55 -0500
+
+
+Started GET "/books/products/Browse" for 127.0.0.1 at 2014-09-09 09:04:53 -0500
+Processing by BooksController#show as HTML
+  Parameters: {"product_id"=>"Browse"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mCart Load (0.2ms)[0m  [1mSELECT  "carts".* FROM "carts"  WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 19]]
+  [1m[35mBook Load (0.2ms)[0m  SELECT  "books".* FROM "books"  WHERE "books"."product_id" = 'Browse'  ORDER BY "books"."id" ASC LIMIT 1
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products"  WHERE "products"."id" = 0  ORDER BY "products"."id" ASC LIMIT 1[0m
+  Rendered books/show.html.erb within layouts/application (47.3ms)
+Completed 500 Internal Server Error in 57ms
+
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    16:   </thead>
+    17:   <tbody>
+    18:     <tr>
+    19:         <td><%= @book.id%></td>
+    20:         <td><%= @product.name %></td>
+    21:         <td><%= @book.author %></td>
+    22:         <td><%= @product.price %></td>
+  app/views/books/show.html.erb:19:in `_app_views_books_show_html_erb__454560080514002113_70356511370180'
+
+
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.7ms)
+
+
+Started GET "/books/products/Browse" for 127.0.0.1 at 2014-09-09 09:04:53 -0500
+Processing by BooksController#show as HTML
+  Parameters: {"product_id"=>"Browse"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT  "carts".* FROM "carts"  WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 19]]
+  [1m[35mBook Load (0.2ms)[0m  SELECT  "books".* FROM "books"  WHERE "books"."product_id" = 'Browse'  ORDER BY "books"."id" ASC LIMIT 1
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products"  WHERE "products"."id" = 0  ORDER BY "products"."id" ASC LIMIT 1[0m
+  Rendered books/show.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 12ms
+
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    16:   </thead>
+    17:   <tbody>
+    18:     <tr>
+    19:         <td><%= @book.id%></td>
+    20:         <td><%= @product.name %></td>
+    21:         <td><%= @book.author %></td>
+    22:         <td><%= @product.price %></td>
+  app/views/books/show.html.erb:19:in `_app_views_books_show_html_erb__454560080514002113_70356535030720'
+
+
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (14.2ms)
+
+
+Started GET "/Browse" for 127.0.0.1 at 2014-09-09 09:05:53 -0500
+Processing by ProductsController#browse as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 1  ORDER BY "categories"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 1  ORDER BY "categories"."id" ASC LIMIT 1[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 2  ORDER BY "categories"."id" ASC LIMIT 1
+  Rendered products/browse.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 113ms (Views: 110.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/about.css?body=1" for 127.0.0.1 at 2014-09-09 09:05:53 -0500
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-09-09 09:05:53 -0500
+
+
+Started GET "/assets/browse.css?body=1" for 127.0.0.1 at 2014-09-09 09:05:53 -0500
+
+
+Started GET "/assets/careers.css?body=1" for 127.0.0.1 at 2014-09-09 09:05:53 -0500
+
+
+Started GET "/assets/cart.css?body=1" for 127.0.0.1 at 2014-09-09 09:05:53 -0500
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-09-09 09:05:53 -0500
+
+
+Started GET "/assets/cart_items.css?body=1" for 127.0.0.1 at 2014-09-09 09:05:53 -0500
+
+
+Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2014-09-09 09:05:53 -0500
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at 2014-09-09 09:05:53 -0500
+
+
+Started GET "/assets/mycart.css?body=1" for 127.0.0.1 at 2014-09-09 09:05:53 -0500
+
+
+Started GET "/assets/order.css?body=1" for 127.0.0.1 at 2014-09-09 09:05:53 -0500
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-09-09 09:05:53 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-09-09 09:05:53 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-09-09 09:05:53 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-09 09:05:53 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:53 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:53 -0500
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:53 -0500
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:53 -0500
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:53 -0500
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:53 -0500
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:53 -0500
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:53 -0500
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:53 -0500
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:53 -0500
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:53 -0500
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:53 -0500
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:53 -0500
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:53 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:53 -0500
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:53 -0500
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:53 -0500
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:53 -0500
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:53 -0500
+
+
+Started GET "/assets/browse.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:53 -0500
+
+
+Started GET "/assets/careers.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:53 -0500
+
+
+Started GET "/assets/cart.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:53 -0500
+
+
+Started GET "/assets/cart_items.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:53 -0500
+
+
+Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:53 -0500
+
+
+Started GET "/assets/games.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:53 -0500
+
+
+Started GET "/assets/mycart.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:53 -0500
+
+
+Started GET "/assets/order.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:53 -0500
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:53 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:53 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:53 -0500
+
+
+Started POST "/products/3/categories/1" for 127.0.0.1 at 2014-09-09 09:05:54 -0500
+Processing by ProductsController#show_products_page as HTML
+  Parameters: {"authenticity_token"=>"xguojFfN5rAG+N0Vc+WtpeFupSXcqRkyk5ZulkEAtg4=", "product_id"=>"3", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 1  ORDER BY "categories"."id" ASC LIMIT 1
+Redirected to http://localhost:3000/books/products/3
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/books/products/3" for 127.0.0.1 at 2014-09-09 09:05:54 -0500
+Processing by BooksController#show as HTML
+  Parameters: {"product_id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mCart Load (0.1ms)[0m  SELECT  "carts".* FROM "carts"  WHERE "carts"."id" = ? LIMIT 1  [["id", 19]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books"  WHERE "books"."product_id" = '3'  ORDER BY "books"."id" ASC LIMIT 1[0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products"  WHERE "products"."id" = 3  ORDER BY "products"."id" ASC LIMIT 1
+  Rendered books/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 111ms (Views: 107.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/about.css?body=1" for 127.0.0.1 at 2014-09-09 09:05:54 -0500
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-09-09 09:05:54 -0500
+
+
+Started GET "/assets/browse.css?body=1" for 127.0.0.1 at 2014-09-09 09:05:54 -0500
+
+
+Started GET "/assets/careers.css?body=1" for 127.0.0.1 at 2014-09-09 09:05:54 -0500
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-09-09 09:05:54 -0500
+
+
+Started GET "/assets/cart.css?body=1" for 127.0.0.1 at 2014-09-09 09:05:54 -0500
+
+
+Started GET "/assets/cart_items.css?body=1" for 127.0.0.1 at 2014-09-09 09:05:54 -0500
+
+
+Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2014-09-09 09:05:54 -0500
+
+
+Started GET "/assets/mycart.css?body=1" for 127.0.0.1 at 2014-09-09 09:05:54 -0500
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at 2014-09-09 09:05:54 -0500
+
+
+Started GET "/assets/order.css?body=1" for 127.0.0.1 at 2014-09-09 09:05:54 -0500
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-09-09 09:05:55 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-09-09 09:05:55 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-09-09 09:05:55 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:55 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-09 09:05:55 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:55 -0500
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:55 -0500
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:55 -0500
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:55 -0500
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:55 -0500
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:55 -0500
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:55 -0500
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:55 -0500
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:55 -0500
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:55 -0500
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:55 -0500
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:55 -0500
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:55 -0500
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:55 -0500
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:55 -0500
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:55 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:55 -0500
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:55 -0500
+
+
+Started GET "/assets/browse.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:55 -0500
+
+
+Started GET "/assets/careers.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:55 -0500
+
+
+Started GET "/assets/cart.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:55 -0500
+
+
+Started GET "/assets/cart_items.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:55 -0500
+
+
+Started GET "/assets/games.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:55 -0500
+
+
+Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:55 -0500
+
+
+Started GET "/assets/mycart.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:55 -0500
+
+
+Started GET "/assets/order.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:55 -0500
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:55 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:55 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:55 -0500
+
+
+Started GET "/Browse" for 127.0.0.1 at 2014-09-09 09:05:58 -0500
+Processing by ProductsController#browse as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 1  ORDER BY "categories"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 1  ORDER BY "categories"."id" ASC LIMIT 1
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 2  ORDER BY "categories"."id" ASC LIMIT 1[0m
+  Rendered products/browse.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 153ms (Views: 150.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-09-09 09:05:58 -0500
+
+
+Started GET "/assets/about.css?body=1" for 127.0.0.1 at 2014-09-09 09:05:58 -0500
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-09-09 09:05:58 -0500
+
+
+Started GET "/assets/browse.css?body=1" for 127.0.0.1 at 2014-09-09 09:05:58 -0500
+
+
+Started GET "/assets/cart.css?body=1" for 127.0.0.1 at 2014-09-09 09:05:58 -0500
+
+
+Started GET "/assets/careers.css?body=1" for 127.0.0.1 at 2014-09-09 09:05:58 -0500
+
+
+Started GET "/assets/cart_items.css?body=1" for 127.0.0.1 at 2014-09-09 09:05:58 -0500
+
+
+Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2014-09-09 09:05:58 -0500
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at 2014-09-09 09:05:58 -0500
+
+
+Started GET "/assets/mycart.css?body=1" for 127.0.0.1 at 2014-09-09 09:05:58 -0500
+
+
+Started GET "/assets/order.css?body=1" for 127.0.0.1 at 2014-09-09 09:05:58 -0500
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-09-09 09:05:58 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-09-09 09:05:58 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-09-09 09:05:58 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:58 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-09 09:05:58 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:58 -0500
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:59 -0500
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:59 -0500
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:59 -0500
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:59 -0500
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:59 -0500
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:59 -0500
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:59 -0500
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:59 -0500
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:59 -0500
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:59 -0500
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:59 -0500
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:59 -0500
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:59 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:59 -0500
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:59 -0500
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:59 -0500
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:59 -0500
+
+
+Started GET "/assets/browse.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:59 -0500
+
+
+Started GET "/assets/cart.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:59 -0500
+
+
+Started GET "/assets/careers.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:59 -0500
+
+
+Started GET "/assets/cart_items.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:59 -0500
+
+
+Started GET "/assets/games.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:59 -0500
+
+
+Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:59 -0500
+
+
+Started GET "/assets/mycart.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:59 -0500
+
+
+Started GET "/assets/order.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:59 -0500
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:59 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:59 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-09 09:05:59 -0500
+
+
+Started POST "/products/4/categories/1" for 127.0.0.1 at 2014-09-09 09:06:00 -0500
+Processing by ProductsController#show_products_page as HTML
+  Parameters: {"authenticity_token"=>"xguojFfN5rAG+N0Vc+WtpeFupSXcqRkyk5ZulkEAtg4=", "product_id"=>"4", "id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 1  ORDER BY "categories"."id" ASC LIMIT 1[0m
+Redirected to http://localhost:3000/books/products/4
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/books/products/4" for 127.0.0.1 at 2014-09-09 09:06:00 -0500
+Processing by BooksController#show as HTML
+  Parameters: {"product_id"=>"4"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT  "carts".* FROM "carts"  WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 19]]
+  [1m[35mBook Load (0.2ms)[0m  SELECT  "books".* FROM "books"  WHERE "books"."product_id" = '4'  ORDER BY "books"."id" ASC LIMIT 1
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products"  WHERE "products"."id" = 4  ORDER BY "products"."id" ASC LIMIT 1[0m
+  Rendered books/show.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    16:   </thead>
+    17:   <tbody>
+    18:     <tr>
+    19:         <td><%= @book.id%></td>
+    20:         <td><%= @product.name %></td>
+    21:         <td><%= @book.author %></td>
+    22:         <td><%= @product.price %></td>
+  app/views/books/show.html.erb:19:in `_app_views_books_show_html_erb__454560080514002113_70356535030720'
+
+
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (17.2ms)
+
+
+Started GET "/Browse" for 127.0.0.1 at 2014-09-09 09:14:51 -0500
+Processing by ProductsController#browse as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 1  ORDER BY "categories"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 1  ORDER BY "categories"."id" ASC LIMIT 1[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 2  ORDER BY "categories"."id" ASC LIMIT 1
+  Rendered products/browse.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 191ms (Views: 122.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/about.css?body=1" for 127.0.0.1 at 2014-09-09 09:14:52 -0500
+
+
+Started GET "/assets/browse.css?body=1" for 127.0.0.1 at 2014-09-09 09:14:52 -0500
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-09-09 09:14:52 -0500
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-09-09 09:14:52 -0500
+
+
+Started GET "/assets/cart.css?body=1" for 127.0.0.1 at 2014-09-09 09:14:52 -0500
+
+
+Started GET "/assets/careers.css?body=1" for 127.0.0.1 at 2014-09-09 09:14:52 -0500
+
+
+Started GET "/assets/cart_items.css?body=1" for 127.0.0.1 at 2014-09-09 09:14:52 -0500
+
+
+Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2014-09-09 09:14:52 -0500
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at 2014-09-09 09:14:52 -0500
+
+
+Started GET "/assets/mycart.css?body=1" for 127.0.0.1 at 2014-09-09 09:14:52 -0500
+
+
+Started GET "/assets/order.css?body=1" for 127.0.0.1 at 2014-09-09 09:14:52 -0500
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-09-09 09:14:52 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-09-09 09:14:52 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-09-09 09:14:52 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-09 09:14:52 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-09 09:14:52 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-09 09:14:52 -0500
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-09-09 09:14:52 -0500
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-09-09 09:14:52 -0500
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-09-09 09:14:52 -0500
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-09-09 09:14:52 -0500
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-09-09 09:14:52 -0500
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-09-09 09:14:52 -0500
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-09-09 09:14:52 -0500
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-09-09 09:14:52 -0500
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-09-09 09:14:52 -0500
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-09-09 09:14:52 -0500
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-09-09 09:14:52 -0500
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-09-09 09:14:52 -0500
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-09 09:14:52 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-09 09:14:52 -0500
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2014-09-09 09:14:52 -0500
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-09-09 09:14:52 -0500
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-09 09:14:52 -0500
+
+
+Started GET "/assets/browse.js?body=1" for 127.0.0.1 at 2014-09-09 09:14:52 -0500
+
+
+Started GET "/assets/careers.js?body=1" for 127.0.0.1 at 2014-09-09 09:14:52 -0500
+
+
+Started GET "/assets/cart.js?body=1" for 127.0.0.1 at 2014-09-09 09:14:52 -0500
+
+
+Started GET "/assets/cart_items.js?body=1" for 127.0.0.1 at 2014-09-09 09:14:52 -0500
+
+
+Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2014-09-09 09:14:52 -0500
+
+
+Started GET "/assets/mycart.js?body=1" for 127.0.0.1 at 2014-09-09 09:14:52 -0500
+
+
+Started GET "/assets/games.js?body=1" for 127.0.0.1 at 2014-09-09 09:14:52 -0500
+
+
+Started GET "/assets/order.js?body=1" for 127.0.0.1 at 2014-09-09 09:14:52 -0500
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-09-09 09:14:52 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-09-09 09:14:52 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-09 09:14:52 -0500
+
+
+Started POST "/products/3/categories/1" for 127.0.0.1 at 2014-09-09 09:14:53 -0500
+Processing by ProductsController#show_products_page as HTML
+  Parameters: {"authenticity_token"=>"xguojFfN5rAG+N0Vc+WtpeFupSXcqRkyk5ZulkEAtg4=", "product_id"=>"3", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 1  ORDER BY "categories"."id" ASC LIMIT 1
+Completed 500 Internal Server Error in 7ms
+
+ActionController::UrlGenerationError (No route matches {:action=>"show", :book_id=>"3", :controller=>"books", :format=>nil, :id=>"1", :product_id=>nil} missing required keys: [:product_id]):
+  app/controllers/products_controller.rb:11:in `show_products_page'
+
+
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.2ms)
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (27.9ms)
+
+
+Started GET "/Browse" for 127.0.0.1 at 2014-09-09 10:11:16 -0500
+Processing by ProductsController#browse as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 1  ORDER BY "categories"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 1  ORDER BY "categories"."id" ASC LIMIT 1
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 2  ORDER BY "categories"."id" ASC LIMIT 1[0m
+  Rendered products/browse.html.erb within layouts/application (20.4ms)
+Completed 200 OK in 139ms (Views: 118.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/about.css?body=1" for 127.0.0.1 at 2014-09-09 10:11:16 -0500
+
+
+Started GET "/assets/browse.css?body=1" for 127.0.0.1 at 2014-09-09 10:11:16 -0500
+
+
+Started GET "/assets/cart.css?body=1" for 127.0.0.1 at 2014-09-09 10:11:16 -0500
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-09-09 10:11:16 -0500
+
+
+Started GET "/assets/careers.css?body=1" for 127.0.0.1 at 2014-09-09 10:11:16 -0500
+
+
+Started GET "/assets/cart_items.css?body=1" for 127.0.0.1 at 2014-09-09 10:11:16 -0500
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-09-09 10:11:16 -0500
+
+
+Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2014-09-09 10:11:16 -0500
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at 2014-09-09 10:11:16 -0500
+
+
+Started GET "/assets/mycart.css?body=1" for 127.0.0.1 at 2014-09-09 10:11:16 -0500
+
+
+Started GET "/assets/order.css?body=1" for 127.0.0.1 at 2014-09-09 10:11:16 -0500
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-09-09 10:11:16 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-09-09 10:11:17 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-09-09 10:11:17 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-09 10:11:17 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-09 10:11:17 -0500
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-09-09 10:11:17 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-09 10:11:17 -0500
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-09-09 10:11:17 -0500
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-09-09 10:11:17 -0500
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-09-09 10:11:17 -0500
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-09-09 10:11:17 -0500
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-09-09 10:11:17 -0500
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-09-09 10:11:17 -0500
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-09-09 10:11:17 -0500
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-09-09 10:11:17 -0500
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-09-09 10:11:17 -0500
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-09-09 10:11:17 -0500
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-09-09 10:11:17 -0500
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-09 10:11:17 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-09 10:11:17 -0500
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2014-09-09 10:11:17 -0500
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-09-09 10:11:17 -0500
+
+
+Started GET "/assets/browse.js?body=1" for 127.0.0.1 at 2014-09-09 10:11:17 -0500
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-09 10:11:17 -0500
+
+
+Started GET "/assets/careers.js?body=1" for 127.0.0.1 at 2014-09-09 10:11:17 -0500
+
+
+Started GET "/assets/cart.js?body=1" for 127.0.0.1 at 2014-09-09 10:11:17 -0500
+
+
+Started GET "/assets/cart_items.js?body=1" for 127.0.0.1 at 2014-09-09 10:11:17 -0500
+
+
+Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2014-09-09 10:11:17 -0500
+
+
+Started GET "/assets/games.js?body=1" for 127.0.0.1 at 2014-09-09 10:11:17 -0500
+
+
+Started GET "/assets/mycart.js?body=1" for 127.0.0.1 at 2014-09-09 10:11:17 -0500
+
+
+Started GET "/assets/order.js?body=1" for 127.0.0.1 at 2014-09-09 10:11:17 -0500
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-09-09 10:11:17 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-09-09 10:11:17 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-09 10:11:17 -0500
+
+
+Started POST "/products/3/categories/1" for 127.0.0.1 at 2014-09-09 10:11:18 -0500
+Processing by ProductsController#show_products_page as HTML
+  Parameters: {"authenticity_token"=>"xguojFfN5rAG+N0Vc+WtpeFupSXcqRkyk5ZulkEAtg4=", "product_id"=>"3", "id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 1  ORDER BY "categories"."id" ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 3ms
+
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"books", :format=>nil, :id=>"3", :product_id=>nil} missing required keys: [:product_id]):
+  app/controllers/products_controller.rb:11:in `show_products_page'
+
+
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.9ms)
+
+
+Started GET "/Browse" for 127.0.0.1 at 2014-09-09 10:12:14 -0500
+Processing by ProductsController#browse as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 1  ORDER BY "categories"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 1  ORDER BY "categories"."id" ASC LIMIT 1[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 2  ORDER BY "categories"."id" ASC LIMIT 1
+  Rendered products/browse.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 134ms (Views: 114.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-09-09 10:12:14 -0500
+
+
+Started GET "/assets/about.css?body=1" for 127.0.0.1 at 2014-09-09 10:12:14 -0500
+
+
+Started GET "/assets/careers.css?body=1" for 127.0.0.1 at 2014-09-09 10:12:14 -0500
+
+
+Started GET "/assets/browse.css?body=1" for 127.0.0.1 at 2014-09-09 10:12:14 -0500
+
+
+Started GET "/assets/cart.css?body=1" for 127.0.0.1 at 2014-09-09 10:12:14 -0500
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-09-09 10:12:14 -0500
+
+
+Started GET "/assets/cart_items.css?body=1" for 127.0.0.1 at 2014-09-09 10:12:14 -0500
+
+
+Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2014-09-09 10:12:14 -0500
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at 2014-09-09 10:12:14 -0500
+
+
+Started GET "/assets/mycart.css?body=1" for 127.0.0.1 at 2014-09-09 10:12:14 -0500
+
+
+Started GET "/assets/order.css?body=1" for 127.0.0.1 at 2014-09-09 10:12:14 -0500
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-09-09 10:12:14 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-09-09 10:12:14 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-09-09 10:12:14 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-09 10:12:14 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-09 10:12:14 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-09 10:12:14 -0500
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-09-09 10:12:14 -0500
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-09-09 10:12:14 -0500
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-09-09 10:12:14 -0500
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-09-09 10:12:14 -0500
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-09-09 10:12:14 -0500
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-09-09 10:12:14 -0500
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-09-09 10:12:14 -0500
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-09-09 10:12:14 -0500
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-09-09 10:12:14 -0500
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-09-09 10:12:14 -0500
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-09-09 10:12:14 -0500
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-09-09 10:12:14 -0500
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-09 10:12:14 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-09 10:12:14 -0500
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2014-09-09 10:12:14 -0500
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-09-09 10:12:14 -0500
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-09 10:12:14 -0500
+
+
+Started GET "/assets/browse.js?body=1" for 127.0.0.1 at 2014-09-09 10:12:14 -0500
+
+
+Started GET "/assets/careers.js?body=1" for 127.0.0.1 at 2014-09-09 10:12:14 -0500
+
+
+Started GET "/assets/cart.js?body=1" for 127.0.0.1 at 2014-09-09 10:12:14 -0500
+
+
+Started GET "/assets/cart_items.js?body=1" for 127.0.0.1 at 2014-09-09 10:12:14 -0500
+
+
+Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2014-09-09 10:12:14 -0500
+
+
+Started GET "/assets/games.js?body=1" for 127.0.0.1 at 2014-09-09 10:12:14 -0500
+
+
+Started GET "/assets/mycart.js?body=1" for 127.0.0.1 at 2014-09-09 10:12:14 -0500
+
+
+Started GET "/assets/order.js?body=1" for 127.0.0.1 at 2014-09-09 10:12:14 -0500
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-09-09 10:12:14 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-09-09 10:12:14 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-09 10:12:14 -0500
+
+
+Started POST "/products/4/categories/1" for 127.0.0.1 at 2014-09-09 10:12:15 -0500
+Processing by ProductsController#show_products_page as HTML
+  Parameters: {"authenticity_token"=>"xguojFfN5rAG+N0Vc+WtpeFupSXcqRkyk5ZulkEAtg4=", "product_id"=>"4", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 1  ORDER BY "categories"."id" ASC LIMIT 1
+Completed 500 Internal Server Error in 4ms
+
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"books", :format=>nil, :id=>"4", :product_id=>nil} missing required keys: [:product_id]):
+  app/controllers/products_controller.rb:11:in `show_products_page'
+
+
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.3ms)
+
+
+Started GET "/Browse" for 127.0.0.1 at 2014-09-09 10:45:05 -0500
+Processing by ProductsController#browse as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 1  ORDER BY "categories"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 1  ORDER BY "categories"."id" ASC LIMIT 1
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 2  ORDER BY "categories"."id" ASC LIMIT 1[0m
+  Rendered products/browse.html.erb within layouts/application (69.1ms)
+Completed 200 OK in 201ms (Views: 178.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-09-09 10:45:05 -0500
+
+
+Started GET "/assets/about.css?body=1" for 127.0.0.1 at 2014-09-09 10:45:05 -0500
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-09-09 10:45:05 -0500
+
+
+Started GET "/assets/careers.css?body=1" for 127.0.0.1 at 2014-09-09 10:45:05 -0500
+
+
+Started GET "/assets/browse.css?body=1" for 127.0.0.1 at 2014-09-09 10:45:05 -0500
+
+
+Started GET "/assets/cart.css?body=1" for 127.0.0.1 at 2014-09-09 10:45:05 -0500
+
+
+Started GET "/assets/cart_items.css?body=1" for 127.0.0.1 at 2014-09-09 10:45:05 -0500
+
+
+Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2014-09-09 10:45:05 -0500
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at 2014-09-09 10:45:05 -0500
+
+
+Started GET "/assets/mycart.css?body=1" for 127.0.0.1 at 2014-09-09 10:45:05 -0500
+
+
+Started GET "/assets/order.css?body=1" for 127.0.0.1 at 2014-09-09 10:45:05 -0500
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-09-09 10:45:05 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-09-09 10:45:05 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-09-09 10:45:05 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-09 10:45:05 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-09 10:45:05 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-09 10:45:05 -0500
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-09-09 10:45:05 -0500
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-09-09 10:45:05 -0500
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-09-09 10:45:05 -0500
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-09-09 10:45:05 -0500
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-09-09 10:45:05 -0500
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-09-09 10:45:05 -0500
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-09-09 10:45:05 -0500
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-09-09 10:45:05 -0500
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-09-09 10:45:05 -0500
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-09-09 10:45:05 -0500
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-09-09 10:45:05 -0500
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-09 10:45:05 -0500
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-09-09 10:45:05 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-09 10:45:05 -0500
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2014-09-09 10:45:05 -0500
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-09-09 10:45:05 -0500
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-09 10:45:05 -0500
+
+
+Started GET "/assets/browse.js?body=1" for 127.0.0.1 at 2014-09-09 10:45:05 -0500
+
+
+Started GET "/assets/careers.js?body=1" for 127.0.0.1 at 2014-09-09 10:45:05 -0500
+
+
+Started GET "/assets/cart.js?body=1" for 127.0.0.1 at 2014-09-09 10:45:05 -0500
+
+
+Started GET "/assets/cart_items.js?body=1" for 127.0.0.1 at 2014-09-09 10:45:05 -0500
+
+
+Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2014-09-09 10:45:05 -0500
+
+
+Started GET "/assets/games.js?body=1" for 127.0.0.1 at 2014-09-09 10:45:05 -0500
+
+
+Started GET "/assets/mycart.js?body=1" for 127.0.0.1 at 2014-09-09 10:45:05 -0500
+
+
+Started GET "/assets/order.js?body=1" for 127.0.0.1 at 2014-09-09 10:45:05 -0500
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-09-09 10:45:05 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-09 10:45:05 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-09-09 10:45:05 -0500
+
+
+Started POST "/products/4/categories/1" for 127.0.0.1 at 2014-09-09 10:45:06 -0500
+Processing by ProductsController#show_products_page as HTML
+  Parameters: {"authenticity_token"=>"xguojFfN5rAG+N0Vc+WtpeFupSXcqRkyk5ZulkEAtg4=", "product_id"=>"4", "id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 1  ORDER BY "categories"."id" ASC LIMIT 1[0m
+Redirected to http://localhost:3000/book_show/4
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/book_show/4" for 127.0.0.1 at 2014-09-09 10:45:06 -0500
+Processing by BooksController#show as HTML
+  Parameters: {"product_id"=>"4"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mCart Load (0.2ms)[0m  [1mSELECT  "carts".* FROM "carts"  WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 19]]
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books"  WHERE "books"."product_id" = '4'  ORDER BY "books"."id" ASC LIMIT 1
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  "products".* FROM "products"  WHERE "products"."id" = 4  ORDER BY "products"."id" ASC LIMIT 1[0m
+  Rendered books/show.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 17ms
+
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    16:   </thead>
+    17:   <tbody>
+    18:     <tr>
+    19:         <td><%= @book.id%></td>
+    20:         <td><%= @product.name %></td>
+    21:         <td><%= @book.author %></td>
+    22:         <td><%= @product.price %></td>
+  app/views/books/show.html.erb:19:in `_app_views_books_show_html_erb__454560080514002113_70356535030720'
+
+
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (15.8ms)
+
+
+Started GET "/Browse" for 127.0.0.1 at 2014-09-09 10:46:41 -0500
+Processing by ProductsController#browse as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 1  ORDER BY "categories"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 1  ORDER BY "categories"."id" ASC LIMIT 1[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 2  ORDER BY "categories"."id" ASC LIMIT 1
+  Rendered products/browse.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 136ms (Views: 115.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/about.css?body=1" for 127.0.0.1 at 2014-09-09 10:46:42 -0500
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-09-09 10:46:42 -0500
+
+
+Started GET "/assets/careers.css?body=1" for 127.0.0.1 at 2014-09-09 10:46:42 -0500
+
+
+Started GET "/assets/browse.css?body=1" for 127.0.0.1 at 2014-09-09 10:46:42 -0500
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-09-09 10:46:42 -0500
+
+
+Started GET "/assets/cart.css?body=1" for 127.0.0.1 at 2014-09-09 10:46:42 -0500
+
+
+Started GET "/assets/cart_items.css?body=1" for 127.0.0.1 at 2014-09-09 10:46:42 -0500
+
+
+Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2014-09-09 10:46:42 -0500
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at 2014-09-09 10:46:42 -0500
+
+
+Started GET "/assets/mycart.css?body=1" for 127.0.0.1 at 2014-09-09 10:46:42 -0500
+
+
+Started GET "/assets/order.css?body=1" for 127.0.0.1 at 2014-09-09 10:46:42 -0500
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-09-09 10:46:42 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-09-09 10:46:42 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-09-09 10:46:42 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-09 10:46:42 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-09 10:46:42 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-09 10:46:42 -0500
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-09-09 10:46:42 -0500
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-09-09 10:46:42 -0500
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-09-09 10:46:42 -0500
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-09-09 10:46:42 -0500
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-09-09 10:46:42 -0500
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-09-09 10:46:42 -0500
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-09-09 10:46:42 -0500
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-09-09 10:46:42 -0500
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-09-09 10:46:42 -0500
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-09-09 10:46:42 -0500
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-09-09 10:46:42 -0500
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-09-09 10:46:42 -0500
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-09 10:46:42 -0500
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2014-09-09 10:46:42 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-09 10:46:42 -0500
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-09-09 10:46:42 -0500
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-09 10:46:42 -0500
+
+
+Started GET "/assets/browse.js?body=1" for 127.0.0.1 at 2014-09-09 10:46:42 -0500
+
+
+Started GET "/assets/careers.js?body=1" for 127.0.0.1 at 2014-09-09 10:46:42 -0500
+
+
+Started GET "/assets/cart.js?body=1" for 127.0.0.1 at 2014-09-09 10:46:42 -0500
+
+
+Started GET "/assets/cart_items.js?body=1" for 127.0.0.1 at 2014-09-09 10:46:42 -0500
+
+
+Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2014-09-09 10:46:42 -0500
+
+
+Started GET "/assets/games.js?body=1" for 127.0.0.1 at 2014-09-09 10:46:42 -0500
+
+
+Started GET "/assets/mycart.js?body=1" for 127.0.0.1 at 2014-09-09 10:46:42 -0500
+
+
+Started GET "/assets/order.js?body=1" for 127.0.0.1 at 2014-09-09 10:46:42 -0500
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-09-09 10:46:42 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-09-09 10:46:42 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-09 10:46:42 -0500
+
+
+Started POST "/products/4/categories/1" for 127.0.0.1 at 2014-09-09 10:46:43 -0500
+Processing by ProductsController#show_products_page as HTML
+  Parameters: {"authenticity_token"=>"xguojFfN5rAG+N0Vc+WtpeFupSXcqRkyk5ZulkEAtg4=", "product_id"=>"4", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 1  ORDER BY "categories"."id" ASC LIMIT 1
+Redirected to http://localhost:3000/book_show/products/4
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/book_show/products/4" for 127.0.0.1 at 2014-09-09 10:46:43 -0500
+Processing by BooksController#show as HTML
+  Parameters: {"product_id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mCart Load (0.1ms)[0m  SELECT  "carts".* FROM "carts"  WHERE "carts"."id" = ? LIMIT 1  [["id", 19]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books"  WHERE "books"."product_id" = '4'  ORDER BY "books"."id" ASC LIMIT 1[0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products"  WHERE "products"."id" = 4  ORDER BY "products"."id" ASC LIMIT 1
+  Rendered books/show.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 15ms
+
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    16:   </thead>
+    17:   <tbody>
+    18:     <tr>
+    19:         <td><%= @book.id%></td>
+    20:         <td><%= @product.name %></td>
+    21:         <td><%= @book.author %></td>
+    22:         <td><%= @product.price %></td>
+  app/views/books/show.html.erb:19:in `_app_views_books_show_html_erb__454560080514002113_70356535030720'
+
+
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.8ms)
+
+
+Started GET "/Browse" for 127.0.0.1 at 2014-09-09 10:48:34 -0500
+Processing by ProductsController#browse as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 1  ORDER BY "categories"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 1  ORDER BY "categories"."id" ASC LIMIT 1
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 2  ORDER BY "categories"."id" ASC LIMIT 1[0m
+  Rendered products/browse.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 133ms (Views: 113.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-09-09 10:48:34 -0500
+
+
+Started GET "/assets/about.css?body=1" for 127.0.0.1 at 2014-09-09 10:48:34 -0500
+
+
+Started GET "/assets/careers.css?body=1" for 127.0.0.1 at 2014-09-09 10:48:34 -0500
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-09-09 10:48:34 -0500
+
+
+Started GET "/assets/browse.css?body=1" for 127.0.0.1 at 2014-09-09 10:48:34 -0500
+
+
+Started GET "/assets/cart.css?body=1" for 127.0.0.1 at 2014-09-09 10:48:34 -0500
+
+
+Started GET "/assets/cart_items.css?body=1" for 127.0.0.1 at 2014-09-09 10:48:34 -0500
+
+
+Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2014-09-09 10:48:34 -0500
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at 2014-09-09 10:48:34 -0500
+
+
+Started GET "/assets/mycart.css?body=1" for 127.0.0.1 at 2014-09-09 10:48:34 -0500
+
+
+Started GET "/assets/order.css?body=1" for 127.0.0.1 at 2014-09-09 10:48:34 -0500
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-09-09 10:48:34 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-09-09 10:48:34 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-09-09 10:48:34 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-09 10:48:34 -0500
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-09-09 10:48:34 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-09 10:48:34 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-09 10:48:34 -0500
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-09-09 10:48:35 -0500
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-09-09 10:48:35 -0500
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-09-09 10:48:35 -0500
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-09-09 10:48:35 -0500
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-09-09 10:48:35 -0500
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-09-09 10:48:35 -0500
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-09-09 10:48:35 -0500
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-09-09 10:48:35 -0500
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-09-09 10:48:35 -0500
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-09-09 10:48:35 -0500
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-09-09 10:48:35 -0500
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-09 10:48:35 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-09 10:48:35 -0500
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2014-09-09 10:48:35 -0500
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-09-09 10:48:35 -0500
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-09 10:48:35 -0500
+
+
+Started GET "/assets/browse.js?body=1" for 127.0.0.1 at 2014-09-09 10:48:35 -0500
+
+
+Started GET "/assets/careers.js?body=1" for 127.0.0.1 at 2014-09-09 10:48:35 -0500
+
+
+Started GET "/assets/cart.js?body=1" for 127.0.0.1 at 2014-09-09 10:48:35 -0500
+
+
+Started GET "/assets/cart_items.js?body=1" for 127.0.0.1 at 2014-09-09 10:48:35 -0500
+
+
+Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2014-09-09 10:48:35 -0500
+
+
+Started GET "/assets/games.js?body=1" for 127.0.0.1 at 2014-09-09 10:48:35 -0500
+
+
+Started GET "/assets/mycart.js?body=1" for 127.0.0.1 at 2014-09-09 10:48:35 -0500
+
+
+Started GET "/assets/order.js?body=1" for 127.0.0.1 at 2014-09-09 10:48:35 -0500
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-09-09 10:48:35 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-09-09 10:48:35 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-09 10:48:35 -0500
+
+
+Started POST "/products/4/categories/1" for 127.0.0.1 at 2014-09-09 10:48:36 -0500
+Processing by ProductsController#show_products_page as HTML
+  Parameters: {"authenticity_token"=>"xguojFfN5rAG+N0Vc+WtpeFupSXcqRkyk5ZulkEAtg4=", "product_id"=>"4", "id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 1  ORDER BY "categories"."id" ASC LIMIT 1[0m
+Redirected to http://localhost:3000/book_show/products/4
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/book_show/products/4" for 127.0.0.1 at 2014-09-09 10:48:36 -0500
+Processing by BooksController#show as HTML
+  Parameters: {"product_id"=>"4"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT  "carts".* FROM "carts"  WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 19]]
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products"  WHERE "products"."id" = 4  ORDER BY "products"."id" ASC LIMIT 1
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books"  WHERE "books"."product_id" = '4'[0m
+  Rendered books/show.html.erb within layouts/application (8.0ms)
+Completed 500 Internal Server Error in 67ms
+
+ActionView::Template::Error (undefined method `id' for #<ActiveRecord::Relation []>):
+    17:   <tbody>
+    18:     <tr>
+    19: 	<% @book = Book.where(product_id: params[:product_id])%>
+    20:         <td><%= @book.id%></td>
+    21:         <td><%= @product.name %></td>
+    22:         <td><%= @book.author %></td>
+    23:         <td><%= @product.price %></td>
+  app/views/books/show.html.erb:20:in `_app_views_books_show_html_erb__454560080514002113_70356503083560'
+
+
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (15.8ms)
+
+
+Started GET "/book_show/products/4" for 127.0.0.1 at 2014-09-09 10:48:45 -0500
+Processing by BooksController#show as HTML
+  Parameters: {"product_id"=>"4"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT  "carts".* FROM "carts"  WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 19]]
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products"  WHERE "products"."id" = 4  ORDER BY "products"."id" ASC LIMIT 1
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT  "books".* FROM "books"  WHERE "books"."product_id" = '4'  ORDER BY "books"."id" ASC LIMIT 1[0m
+  Rendered books/show.html.erb within layouts/application (5.5ms)
+Completed 500 Internal Server Error in 14ms
+
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    17:   <tbody>
+    18:     <tr>
+    19: 	<% @book = Book.where(product_id: params[:product_id]).first%>
+    20:         <td><%= @book.id%></td>
+    21:         <td><%= @product.name %></td>
+    22:         <td><%= @book.author %></td>
+    23:         <td><%= @product.price %></td>
+  app/views/books/show.html.erb:20:in `_app_views_books_show_html_erb__454560080514002113_70356496020380'
+
+
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (13.0ms)
+
+
+Started GET "/book_show/products/4" for 127.0.0.1 at 2014-09-09 10:49:41 -0500
+Processing by BooksController#show as HTML
+  Parameters: {"product_id"=>"4"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mCart Load (0.2ms)[0m  [1mSELECT  "carts".* FROM "carts"  WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 19]]
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products"  WHERE "products"."id" = 4  ORDER BY "products"."id" ASC LIMIT 1
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT  "books".* FROM "books"  WHERE "books"."product_id" = '4'  ORDER BY "books"."id" ASC LIMIT 1[0m
+  Rendered books/show.html.erb within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 15ms
+
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    17:   <tbody>
+    18:     <tr>
+    19: 	<% @book = Book.where(product_id: params[:product_id]).first%>
+    20:         <td><%= @book.id%></td>
+    21:         <td><%= @product.name %></td>
+    22:         <td><%= @book.author %></td>
+    23:         <td><%= @product.price %></td>
+  app/views/books/show.html.erb:20:in `_app_views_books_show_html_erb__454560080514002113_70356496020380'
+
+
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (19.4ms)
+
+
+Started GET "/Browse" for 127.0.0.1 at 2014-09-09 10:49:46 -0500
+Processing by ProductsController#browse as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 1  ORDER BY "categories"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 1  ORDER BY "categories"."id" ASC LIMIT 1[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 2  ORDER BY "categories"."id" ASC LIMIT 1
+  Rendered products/browse.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 115ms (Views: 111.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-09-09 10:49:46 -0500
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-09-09 10:49:46 -0500
+
+
+Started GET "/assets/about.css?body=1" for 127.0.0.1 at 2014-09-09 10:49:46 -0500
+
+
+Started GET "/assets/careers.css?body=1" for 127.0.0.1 at 2014-09-09 10:49:46 -0500
+
+
+Started GET "/assets/cart_items.css?body=1" for 127.0.0.1 at 2014-09-09 10:49:46 -0500
+
+
+Started GET "/assets/browse.css?body=1" for 127.0.0.1 at 2014-09-09 10:49:46 -0500
+
+
+Started GET "/assets/cart.css?body=1" for 127.0.0.1 at 2014-09-09 10:49:46 -0500
+
+
+Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2014-09-09 10:49:46 -0500
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at 2014-09-09 10:49:46 -0500
+
+
+Started GET "/assets/mycart.css?body=1" for 127.0.0.1 at 2014-09-09 10:49:46 -0500
+
+
+Started GET "/assets/order.css?body=1" for 127.0.0.1 at 2014-09-09 10:49:46 -0500
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-09-09 10:49:46 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-09-09 10:49:46 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-09-09 10:49:46 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-09 10:49:46 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:46 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:46 -0500
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:47 -0500
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:47 -0500
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:47 -0500
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:47 -0500
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:47 -0500
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:47 -0500
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:47 -0500
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:47 -0500
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:47 -0500
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:47 -0500
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:47 -0500
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:47 -0500
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:47 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:47 -0500
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:47 -0500
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:47 -0500
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:47 -0500
+
+
+Started GET "/assets/browse.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:47 -0500
+
+
+Started GET "/assets/careers.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:47 -0500
+
+
+Started GET "/assets/cart.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:47 -0500
+
+
+Started GET "/assets/cart_items.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:47 -0500
+
+
+Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:47 -0500
+
+
+Started GET "/assets/games.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:47 -0500
+
+
+Started GET "/assets/mycart.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:47 -0500
+
+
+Started GET "/assets/order.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:47 -0500
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:47 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:47 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:47 -0500
+
+
+Started POST "/products/3/categories/1" for 127.0.0.1 at 2014-09-09 10:49:48 -0500
+Processing by ProductsController#show_products_page as HTML
+  Parameters: {"authenticity_token"=>"xguojFfN5rAG+N0Vc+WtpeFupSXcqRkyk5ZulkEAtg4=", "product_id"=>"3", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 1  ORDER BY "categories"."id" ASC LIMIT 1
+Redirected to http://localhost:3000/book_show/products/3
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/book_show/products/3" for 127.0.0.1 at 2014-09-09 10:49:48 -0500
+Processing by BooksController#show as HTML
+  Parameters: {"product_id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mCart Load (0.1ms)[0m  SELECT  "carts".* FROM "carts"  WHERE "carts"."id" = ? LIMIT 1  [["id", 19]]
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products"  WHERE "products"."id" = 3  ORDER BY "products"."id" ASC LIMIT 1[0m
+  [1m[35mBook Load (0.2ms)[0m  SELECT  "books".* FROM "books"  WHERE "books"."product_id" = '3'  ORDER BY "books"."id" ASC LIMIT 1
+  Rendered books/show.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 109ms (Views: 105.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/about.css?body=1" for 127.0.0.1 at 2014-09-09 10:49:48 -0500
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-09-09 10:49:48 -0500
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-09-09 10:49:48 -0500
+
+
+Started GET "/assets/cart_items.css?body=1" for 127.0.0.1 at 2014-09-09 10:49:48 -0500
+
+
+Started GET "/assets/careers.css?body=1" for 127.0.0.1 at 2014-09-09 10:49:48 -0500
+
+
+Started GET "/assets/browse.css?body=1" for 127.0.0.1 at 2014-09-09 10:49:48 -0500
+
+
+Started GET "/assets/cart.css?body=1" for 127.0.0.1 at 2014-09-09 10:49:48 -0500
+
+
+Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2014-09-09 10:49:48 -0500
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-09-09 10:49:48 -0500
+
+
+Started GET "/assets/mycart.css?body=1" for 127.0.0.1 at 2014-09-09 10:49:48 -0500
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at 2014-09-09 10:49:48 -0500
+
+
+Started GET "/assets/order.css?body=1" for 127.0.0.1 at 2014-09-09 10:49:48 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-09-09 10:49:48 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-09-09 10:49:48 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-09 10:49:48 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:48 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:48 -0500
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:48 -0500
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:48 -0500
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:49 -0500
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:49 -0500
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:49 -0500
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:49 -0500
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:49 -0500
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:49 -0500
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:49 -0500
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:49 -0500
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:49 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:49 -0500
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:49 -0500
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:49 -0500
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:49 -0500
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:49 -0500
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:49 -0500
+
+
+Started GET "/assets/browse.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:49 -0500
+
+
+Started GET "/assets/cart.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:49 -0500
+
+
+Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:49 -0500
+
+
+Started GET "/assets/cart_items.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:49 -0500
+
+
+Started GET "/assets/careers.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:49 -0500
+
+
+Started GET "/assets/games.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:49 -0500
+
+
+Started GET "/assets/mycart.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:49 -0500
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:49 -0500
+
+
+Started GET "/assets/order.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:49 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:49 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:49 -0500
+
+
+Started GET "/Browse" for 127.0.0.1 at 2014-09-09 10:49:55 -0500
+Processing by ProductsController#browse as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 1  ORDER BY "categories"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 1  ORDER BY "categories"."id" ASC LIMIT 1
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 2  ORDER BY "categories"."id" ASC LIMIT 1[0m
+  Rendered products/browse.html.erb within layouts/application (56.4ms)
+Completed 200 OK in 162ms (Views: 158.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/about.css?body=1" for 127.0.0.1 at 2014-09-09 10:49:55 -0500
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-09-09 10:49:55 -0500
+
+
+Started GET "/assets/browse.css?body=1" for 127.0.0.1 at 2014-09-09 10:49:55 -0500
+
+
+Started GET "/assets/cart.css?body=1" for 127.0.0.1 at 2014-09-09 10:49:55 -0500
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-09-09 10:49:55 -0500
+
+
+Started GET "/assets/careers.css?body=1" for 127.0.0.1 at 2014-09-09 10:49:55 -0500
+
+
+Started GET "/assets/cart_items.css?body=1" for 127.0.0.1 at 2014-09-09 10:49:56 -0500
+
+
+Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2014-09-09 10:49:56 -0500
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at 2014-09-09 10:49:56 -0500
+
+
+Started GET "/assets/mycart.css?body=1" for 127.0.0.1 at 2014-09-09 10:49:56 -0500
+
+
+Started GET "/assets/order.css?body=1" for 127.0.0.1 at 2014-09-09 10:49:56 -0500
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-09-09 10:49:56 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-09-09 10:49:56 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-09-09 10:49:56 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-09 10:49:56 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:56 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:56 -0500
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:56 -0500
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:56 -0500
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:56 -0500
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:56 -0500
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:56 -0500
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:56 -0500
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:56 -0500
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:56 -0500
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:56 -0500
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:56 -0500
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:56 -0500
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:56 -0500
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:56 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:56 -0500
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:56 -0500
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:56 -0500
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:56 -0500
+
+
+Started GET "/assets/browse.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:56 -0500
+
+
+Started GET "/assets/careers.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:56 -0500
+
+
+Started GET "/assets/cart.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:56 -0500
+
+
+Started GET "/assets/cart_items.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:56 -0500
+
+
+Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:56 -0500
+
+
+Started GET "/assets/games.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:56 -0500
+
+
+Started GET "/assets/mycart.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:56 -0500
+
+
+Started GET "/assets/order.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:56 -0500
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:56 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:56 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-09 10:49:56 -0500
+
+
+Started POST "/products/4/categories/1" for 127.0.0.1 at 2014-09-09 10:49:58 -0500
+Processing by ProductsController#show_products_page as HTML
+  Parameters: {"authenticity_token"=>"xguojFfN5rAG+N0Vc+WtpeFupSXcqRkyk5ZulkEAtg4=", "product_id"=>"4", "id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 1  ORDER BY "categories"."id" ASC LIMIT 1[0m
+Redirected to http://localhost:3000/book_show/products/4
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/book_show/products/4" for 127.0.0.1 at 2014-09-09 10:49:58 -0500
+Processing by BooksController#show as HTML
+  Parameters: {"product_id"=>"4"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT  "carts".* FROM "carts"  WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 19]]
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products"  WHERE "products"."id" = 4  ORDER BY "products"."id" ASC LIMIT 1
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books"  WHERE "books"."product_id" = '4'  ORDER BY "books"."id" ASC LIMIT 1[0m
+  Rendered books/show.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    17:   <tbody>
+    18:     <tr>
+    19: 	<% @book = Book.where(product_id: params[:product_id]).first%>
+    20:         <td><%= @book.id%></td>
+    21:         <td><%= @product.name %></td>
+    22:         <td><%= @book.author %></td>
+    23:         <td><%= @product.price %></td>
+  app/views/books/show.html.erb:20:in `_app_views_books_show_html_erb__454560080514002113_70356496020380'
+
+
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.6ms)
+
+
+Started GET "/Browse" for 127.0.0.1 at 2014-09-09 10:50:18 -0500
+Processing by ProductsController#browse as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 1  ORDER BY "categories"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 1  ORDER BY "categories"."id" ASC LIMIT 1[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 2  ORDER BY "categories"."id" ASC LIMIT 1
+  Rendered products/browse.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 110ms (Views: 107.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/about.css?body=1" for 127.0.0.1 at 2014-09-09 10:50:18 -0500
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-09-09 10:50:18 -0500
+
+
+Started GET "/assets/careers.css?body=1" for 127.0.0.1 at 2014-09-09 10:50:18 -0500
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-09-09 10:50:18 -0500
+
+
+Started GET "/assets/cart.css?body=1" for 127.0.0.1 at 2014-09-09 10:50:18 -0500
+
+
+Started GET "/assets/browse.css?body=1" for 127.0.0.1 at 2014-09-09 10:50:18 -0500
+
+
+Started GET "/assets/cart_items.css?body=1" for 127.0.0.1 at 2014-09-09 10:50:18 -0500
+
+
+Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2014-09-09 10:50:18 -0500
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at 2014-09-09 10:50:18 -0500
+
+
+Started GET "/assets/mycart.css?body=1" for 127.0.0.1 at 2014-09-09 10:50:18 -0500
+
+
+Started GET "/assets/order.css?body=1" for 127.0.0.1 at 2014-09-09 10:50:18 -0500
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-09-09 10:50:18 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-09-09 10:50:18 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-09 10:50:18 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-09-09 10:50:18 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-09 10:50:18 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-09 10:50:18 -0500
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-09-09 10:50:18 -0500
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-09-09 10:50:18 -0500
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-09-09 10:50:18 -0500
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-09-09 10:50:18 -0500
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-09-09 10:50:18 -0500
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-09-09 10:50:18 -0500
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-09-09 10:50:18 -0500
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-09-09 10:50:18 -0500
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-09-09 10:50:18 -0500
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-09-09 10:50:18 -0500
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-09-09 10:50:18 -0500
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-09-09 10:50:18 -0500
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-09 10:50:18 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-09 10:50:18 -0500
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2014-09-09 10:50:18 -0500
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-09-09 10:50:18 -0500
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-09 10:50:18 -0500
+
+
+Started GET "/assets/browse.js?body=1" for 127.0.0.1 at 2014-09-09 10:50:18 -0500
+
+
+Started GET "/assets/careers.js?body=1" for 127.0.0.1 at 2014-09-09 10:50:18 -0500
+
+
+Started GET "/assets/cart.js?body=1" for 127.0.0.1 at 2014-09-09 10:50:18 -0500
+
+
+Started GET "/assets/cart_items.js?body=1" for 127.0.0.1 at 2014-09-09 10:50:18 -0500
+
+
+Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2014-09-09 10:50:18 -0500
+
+
+Started GET "/assets/mycart.js?body=1" for 127.0.0.1 at 2014-09-09 10:50:18 -0500
+
+
+Started GET "/assets/games.js?body=1" for 127.0.0.1 at 2014-09-09 10:50:18 -0500
+
+
+Started GET "/assets/order.js?body=1" for 127.0.0.1 at 2014-09-09 10:50:18 -0500
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-09-09 10:50:18 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-09-09 10:50:18 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-09 10:50:18 -0500
+
+
+Started GET "/Browse" for 127.0.0.1 at 2014-09-09 10:52:48 -0500
+Processing by ProductsController#browse as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 1  ORDER BY "categories"."id" ASC LIMIT 1[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 2  ORDER BY "categories"."id" ASC LIMIT 1
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" IS NULL  ORDER BY "categories"."id" ASC LIMIT 1[0m
+  Rendered products/browse.html.erb within layouts/application (6.6ms)
+Completed 500 Internal Server Error in 12ms
+
+ActionView::Template::Error (No route matches {:action=>"show_products_page", :controller=>"products", :id=>nil, :product_id=>"8"} missing required keys: [:id]):
+    17:     <% @products.each do |product| %>
+    18: 	    <% @category = Category.where(id: product.category_id).first%>
+    19: 	      <tr>
+    20: 		 <td><%= link_to product.name, show_products_page_path(product, @category), :action => :show_products_page, :method => :post%></td>
+    21: 	         <td><%= number_to_currency(product.price)%></td>
+    22:         	 <td><%= @category.category%></td>
+    23:  <td>
+  app/views/products/browse.html.erb:20:in `block in _app_views_products_browse_html_erb__656928841876068112_70356501970520'
+  app/views/products/browse.html.erb:17:in `_app_views_products_browse_html_erb__656928841876068112_70356501970520'
+
+
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (12.6ms)
+
+
+Started GET "/Browse" for 127.0.0.1 at 2014-09-09 10:54:23 -0500
+Processing by ProductsController#browse as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 1  ORDER BY "categories"."id" ASC LIMIT 1
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 2  ORDER BY "categories"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 1  ORDER BY "categories"."id" ASC LIMIT 1
+  Rendered products/browse.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 115ms (Views: 112.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-09-09 10:54:23 -0500
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-09-09 10:54:23 -0500
+
+
+Started GET "/assets/about.css?body=1" for 127.0.0.1 at 2014-09-09 10:54:24 -0500
+
+
+Started GET "/assets/cart.css?body=1" for 127.0.0.1 at 2014-09-09 10:54:24 -0500
+
+
+Started GET "/assets/careers.css?body=1" for 127.0.0.1 at 2014-09-09 10:54:24 -0500
+
+
+Started GET "/assets/browse.css?body=1" for 127.0.0.1 at 2014-09-09 10:54:24 -0500
+
+
+Started GET "/assets/cart_items.css?body=1" for 127.0.0.1 at 2014-09-09 10:54:24 -0500
+
+
+Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2014-09-09 10:54:24 -0500
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at 2014-09-09 10:54:24 -0500
+
+
+Started GET "/assets/mycart.css?body=1" for 127.0.0.1 at 2014-09-09 10:54:24 -0500
+
+
+Started GET "/assets/order.css?body=1" for 127.0.0.1 at 2014-09-09 10:54:24 -0500
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-09-09 10:54:24 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-09-09 10:54:24 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-09-09 10:54:24 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-09 10:54:24 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:24 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:24 -0500
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:24 -0500
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:24 -0500
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:24 -0500
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:24 -0500
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:24 -0500
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:24 -0500
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:24 -0500
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:24 -0500
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:24 -0500
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:24 -0500
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:24 -0500
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:24 -0500
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:24 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:24 -0500
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:24 -0500
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:24 -0500
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:24 -0500
+
+
+Started GET "/assets/browse.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:24 -0500
+
+
+Started GET "/assets/careers.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:24 -0500
+
+
+Started GET "/assets/cart.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:24 -0500
+
+
+Started GET "/assets/cart_items.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:24 -0500
+
+
+Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:24 -0500
+
+
+Started GET "/assets/games.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:24 -0500
+
+
+Started GET "/assets/order.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:24 -0500
+
+
+Started GET "/assets/mycart.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:24 -0500
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:24 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:24 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:24 -0500
+
+
+Started GET "/Browse" for 127.0.0.1 at 2014-09-09 10:54:44 -0500
+Processing by ProductsController#browse as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products"
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 1  ORDER BY "categories"."id" ASC LIMIT 1[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 2  ORDER BY "categories"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 1  ORDER BY "categories"."id" ASC LIMIT 1[0m
+  Rendered products/browse.html.erb within layouts/application (49.3ms)
+Completed 200 OK in 149ms (Views: 146.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/about.css?body=1" for 127.0.0.1 at 2014-09-09 10:54:44 -0500
+
+
+Started GET "/assets/careers.css?body=1" for 127.0.0.1 at 2014-09-09 10:54:44 -0500
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-09-09 10:54:44 -0500
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-09-09 10:54:44 -0500
+
+
+Started GET "/assets/cart.css?body=1" for 127.0.0.1 at 2014-09-09 10:54:45 -0500
+
+
+Started GET "/assets/browse.css?body=1" for 127.0.0.1 at 2014-09-09 10:54:45 -0500
+
+
+Started GET "/assets/cart_items.css?body=1" for 127.0.0.1 at 2014-09-09 10:54:45 -0500
+
+
+Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2014-09-09 10:54:45 -0500
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at 2014-09-09 10:54:45 -0500
+
+
+Started GET "/assets/mycart.css?body=1" for 127.0.0.1 at 2014-09-09 10:54:45 -0500
+
+
+Started GET "/assets/order.css?body=1" for 127.0.0.1 at 2014-09-09 10:54:45 -0500
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-09-09 10:54:45 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-09-09 10:54:45 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-09-09 10:54:45 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-09 10:54:45 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:45 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:45 -0500
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:45 -0500
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:45 -0500
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:45 -0500
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:45 -0500
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:45 -0500
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:45 -0500
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:45 -0500
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:45 -0500
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:45 -0500
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:45 -0500
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:45 -0500
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:45 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:45 -0500
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:45 -0500
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:45 -0500
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:45 -0500
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:45 -0500
+
+
+Started GET "/assets/careers.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:45 -0500
+
+
+Started GET "/assets/browse.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:45 -0500
+
+
+Started GET "/assets/cart.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:45 -0500
+
+
+Started GET "/assets/cart_items.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:45 -0500
+
+
+Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:45 -0500
+
+
+Started GET "/assets/games.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:45 -0500
+
+
+Started GET "/assets/mycart.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:45 -0500
+
+
+Started GET "/assets/order.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:45 -0500
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:45 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:45 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:45 -0500
+
+
+Started POST "/products/8/categories/1" for 127.0.0.1 at 2014-09-09 10:54:53 -0500
+Processing by ProductsController#show_products_page as HTML
+  Parameters: {"authenticity_token"=>"xguojFfN5rAG+N0Vc+WtpeFupSXcqRkyk5ZulkEAtg4=", "product_id"=>"8", "id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 1  ORDER BY "categories"."id" ASC LIMIT 1[0m
+Redirected to http://localhost:3000/book_show/products/8
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/book_show/products/8" for 127.0.0.1 at 2014-09-09 10:54:53 -0500
+Processing by BooksController#show as HTML
+  Parameters: {"product_id"=>"8"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT  "carts".* FROM "carts"  WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 19]]
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products"  WHERE "products"."id" = 8  ORDER BY "products"."id" ASC LIMIT 1
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books"  WHERE "books"."product_id" = '8'  ORDER BY "books"."id" ASC LIMIT 1[0m
+  Rendered books/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 106ms (Views: 103.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/about.css?body=1" for 127.0.0.1 at 2014-09-09 10:54:54 -0500
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-09-09 10:54:54 -0500
+
+
+Started GET "/assets/browse.css?body=1" for 127.0.0.1 at 2014-09-09 10:54:54 -0500
+
+
+Started GET "/assets/cart.css?body=1" for 127.0.0.1 at 2014-09-09 10:54:54 -0500
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-09-09 10:54:54 -0500
+
+
+Started GET "/assets/careers.css?body=1" for 127.0.0.1 at 2014-09-09 10:54:54 -0500
+
+
+Started GET "/assets/cart_items.css?body=1" for 127.0.0.1 at 2014-09-09 10:54:54 -0500
+
+
+Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2014-09-09 10:54:54 -0500
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at 2014-09-09 10:54:54 -0500
+
+
+Started GET "/assets/mycart.css?body=1" for 127.0.0.1 at 2014-09-09 10:54:54 -0500
+
+
+Started GET "/assets/order.css?body=1" for 127.0.0.1 at 2014-09-09 10:54:54 -0500
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-09-09 10:54:54 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-09-09 10:54:54 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-09-09 10:54:54 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-09 10:54:54 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:54 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:54 -0500
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:54 -0500
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:54 -0500
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:54 -0500
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:54 -0500
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:54 -0500
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:54 -0500
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:54 -0500
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:54 -0500
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:54 -0500
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:54 -0500
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:54 -0500
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:54 -0500
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:54 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:54 -0500
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:54 -0500
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:54 -0500
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:54 -0500
+
+
+Started GET "/assets/browse.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:54 -0500
+
+
+Started GET "/assets/careers.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:54 -0500
+
+
+Started GET "/assets/cart.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:54 -0500
+
+
+Started GET "/assets/cart_items.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:54 -0500
+
+
+Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:54 -0500
+
+
+Started GET "/assets/mycart.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:54 -0500
+
+
+Started GET "/assets/games.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:54 -0500
+
+
+Started GET "/assets/order.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:54 -0500
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:54 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:54 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-09 10:54:54 -0500
+
+
+Started GET "/books" for 127.0.0.1 at 2014-09-09 10:55:04 -0500
+Processing by BooksController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT  "carts".* FROM "carts"  WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 19]]
+  Rendered books/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 7ms
+
+SyntaxError (/Users/renukarajan/Documents/products/app/views/books/index.html.erb:40: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/books/index.html.erb:40: syntax error, unexpected keyword_ensure, expecting end-of-input
+
+
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.4ms)
+
+
+Started GET "/Browse" for 127.0.0.1 at 2014-09-09 10:55:06 -0500
+Processing by ProductsController#browse as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 1  ORDER BY "categories"."id" ASC LIMIT 1
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 2  ORDER BY "categories"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 1  ORDER BY "categories"."id" ASC LIMIT 1
+  Rendered products/browse.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 132ms (Views: 129.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/about.css?body=1" for 127.0.0.1 at 2014-09-09 10:55:06 -0500
+
+
+Started GET "/assets/cart.css?body=1" for 127.0.0.1 at 2014-09-09 10:55:06 -0500
+
+
+Started GET "/assets/browse.css?body=1" for 127.0.0.1 at 2014-09-09 10:55:06 -0500
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-09-09 10:55:06 -0500
+
+
+Started GET "/assets/careers.css?body=1" for 127.0.0.1 at 2014-09-09 10:55:06 -0500
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-09-09 10:55:06 -0500
+
+
+Started GET "/assets/cart_items.css?body=1" for 127.0.0.1 at 2014-09-09 10:55:06 -0500
+
+
+Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2014-09-09 10:55:06 -0500
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at 2014-09-09 10:55:06 -0500
+
+
+Started GET "/assets/mycart.css?body=1" for 127.0.0.1 at 2014-09-09 10:55:06 -0500
+
+
+Started GET "/assets/order.css?body=1" for 127.0.0.1 at 2014-09-09 10:55:06 -0500
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-09-09 10:55:06 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-09-09 10:55:06 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-09-09 10:55:06 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-09 10:55:06 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-09 10:55:06 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-09 10:55:06 -0500
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-09-09 10:55:07 -0500
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-09-09 10:55:07 -0500
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-09-09 10:55:07 -0500
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-09-09 10:55:07 -0500
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-09-09 10:55:07 -0500
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-09-09 10:55:07 -0500
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-09-09 10:55:07 -0500
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-09-09 10:55:07 -0500
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-09-09 10:55:07 -0500
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-09-09 10:55:07 -0500
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-09-09 10:55:07 -0500
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-09-09 10:55:07 -0500
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-09 10:55:07 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-09 10:55:07 -0500
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2014-09-09 10:55:07 -0500
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-09-09 10:55:07 -0500
+
+
+Started GET "/assets/browse.js?body=1" for 127.0.0.1 at 2014-09-09 10:55:07 -0500
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-09 10:55:07 -0500
+
+
+Started GET "/assets/cart.js?body=1" for 127.0.0.1 at 2014-09-09 10:55:07 -0500
+
+
+Started GET "/assets/careers.js?body=1" for 127.0.0.1 at 2014-09-09 10:55:07 -0500
+
+
+Started GET "/assets/cart_items.js?body=1" for 127.0.0.1 at 2014-09-09 10:55:07 -0500
+
+
+Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2014-09-09 10:55:07 -0500
+
+
+Started GET "/assets/games.js?body=1" for 127.0.0.1 at 2014-09-09 10:55:07 -0500
+
+
+Started GET "/assets/mycart.js?body=1" for 127.0.0.1 at 2014-09-09 10:55:07 -0500
+
+
+Started GET "/assets/order.js?body=1" for 127.0.0.1 at 2014-09-09 10:55:07 -0500
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-09-09 10:55:07 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-09-09 10:55:07 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-09 10:55:07 -0500
+
+
+Started POST "/products/5/categories/2" for 127.0.0.1 at 2014-09-09 10:55:08 -0500
+Processing by ProductsController#show_products_page as HTML
+  Parameters: {"authenticity_token"=>"xguojFfN5rAG+N0Vc+WtpeFupSXcqRkyk5ZulkEAtg4=", "product_id"=>"5", "id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 2  ORDER BY "categories"."id" ASC LIMIT 1
+Redirected to http://localhost:3000/games/products/product_id
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/games/products/product_id" for 127.0.0.1 at 2014-09-09 10:55:08 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"product_id"=>"product_id"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mGame Load (0.6ms)[0m  SELECT  "games".* FROM "games"  WHERE "games"."product_id" = 'product_id'  ORDER BY "games"."id" ASC LIMIT 1
+  Rendered games/show.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (undefined method `product_id' for nil:NilClass):
+    16:   </thead>
+    17:   <tbody>
+    18:      <% @game = Game.where(product_id: params[:product_id]).first %>
+    19:     <% @product = Product.where(id: @game.product_id ).first%>
+    20:     <tr>
+    21:         <td><%= @game.id%></td>
+    22:         <td><%= @product.name %></td>
+  app/views/games/show.html.erb:19:in `_app_views_games_show_html_erb___299186914261574892_70356503111280'
+
+
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (12.2ms)
+
+
+Started GET "/games/products/product_id" for 127.0.0.1 at 2014-09-09 10:55:57 -0500
+Processing by GamesController#show as HTML
+  Parameters: {"product_id"=>"product_id"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games"  WHERE "games"."product_id" = 'product_id'  ORDER BY "games"."id" ASC LIMIT 1
+  Rendered games/show.html.erb within layouts/application (7.5ms)
+Completed 500 Internal Server Error in 26ms
+
+ActionView::Template::Error (undefined method `product_id' for nil:NilClass):
+    16:   </thead>
+    17:   <tbody>
+    18:      <% @game = Game.where(product_id: params[:product_id]).first %>
+    19:     <% @product = Product.where(id: @game.product_id ).first%>
+    20:     <tr>
+    21:         <td><%= @game.id%></td>
+    22:         <td><%= @product.name %></td>
+  app/views/games/show.html.erb:19:in `_app_views_games_show_html_erb___299186914261574892_70356503111280'
+
+
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (12.4ms)
+
+
+Started GET "/Browse" for 127.0.0.1 at 2014-09-09 10:56:02 -0500
+Processing by ProductsController#browse as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 1  ORDER BY "categories"."id" ASC LIMIT 1[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 2  ORDER BY "categories"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 1  ORDER BY "categories"."id" ASC LIMIT 1[0m
+  Rendered products/browse.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 156ms (Views: 152.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/about.css?body=1" for 127.0.0.1 at 2014-09-09 10:56:02 -0500
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-09-09 10:56:02 -0500
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-09-09 10:56:02 -0500
+
+
+Started GET "/assets/careers.css?body=1" for 127.0.0.1 at 2014-09-09 10:56:02 -0500
+
+
+Started GET "/assets/browse.css?body=1" for 127.0.0.1 at 2014-09-09 10:56:02 -0500
+
+
+Started GET "/assets/cart.css?body=1" for 127.0.0.1 at 2014-09-09 10:56:02 -0500
+
+
+Started GET "/assets/cart_items.css?body=1" for 127.0.0.1 at 2014-09-09 10:56:02 -0500
+
+
+Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2014-09-09 10:56:02 -0500
+
+
+Started GET "/assets/games.css?body=1" for 127.0.0.1 at 2014-09-09 10:56:02 -0500
+
+
+Started GET "/assets/mycart.css?body=1" for 127.0.0.1 at 2014-09-09 10:56:02 -0500
+
+
+Started GET "/assets/order.css?body=1" for 127.0.0.1 at 2014-09-09 10:56:02 -0500
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-09-09 10:56:02 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-09-09 10:56:02 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-09-09 10:56:02 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-09 10:56:02 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-09 10:56:02 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-09 10:56:02 -0500
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-09-09 10:56:02 -0500
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-09-09 10:56:02 -0500
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-09-09 10:56:02 -0500
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-09-09 10:56:02 -0500
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-09-09 10:56:02 -0500
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-09-09 10:56:02 -0500
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-09-09 10:56:02 -0500
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-09-09 10:56:02 -0500
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-09-09 10:56:02 -0500
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-09-09 10:56:02 -0500
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-09-09 10:56:02 -0500
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-09-09 10:56:02 -0500
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-09 10:56:02 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-09 10:56:02 -0500
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2014-09-09 10:56:02 -0500
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-09-09 10:56:02 -0500
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-09 10:56:02 -0500
+
+
+Started GET "/assets/browse.js?body=1" for 127.0.0.1 at 2014-09-09 10:56:02 -0500
+
+
+Started GET "/assets/careers.js?body=1" for 127.0.0.1 at 2014-09-09 10:56:02 -0500
+
+
+Started GET "/assets/cart_items.js?body=1" for 127.0.0.1 at 2014-09-09 10:56:02 -0500
+
+
+Started GET "/assets/cart.js?body=1" for 127.0.0.1 at 2014-09-09 10:56:02 -0500
+
+
+Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2014-09-09 10:56:02 -0500
+
+
+Started GET "/assets/games.js?body=1" for 127.0.0.1 at 2014-09-09 10:56:02 -0500
+
+
+Started GET "/assets/mycart.js?body=1" for 127.0.0.1 at 2014-09-09 10:56:02 -0500
+
+
+Started GET "/assets/order.js?body=1" for 127.0.0.1 at 2014-09-09 10:56:02 -0500
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-09-09 10:56:02 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-09-09 10:56:02 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-09 10:56:02 -0500
+
+
+Started POST "/products/5/categories/2" for 127.0.0.1 at 2014-09-09 10:56:03 -0500

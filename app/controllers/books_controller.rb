@@ -14,12 +14,9 @@ def create
 end
 
 def show
-  @book = Book.where(product_id: params[:product_id]).first 
   @product = Product.where(id: params[:product_id]).first
 end
 
-#def show
-#end
 
 def index
 	@books=Book.all

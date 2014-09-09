@@ -68,7 +68,7 @@ Booknook::Application.routes.draw do
   	#get '/Browse' => 'browse#browse'
   	get '/Browse' => 'products#browse', :as => :browse
   	get '/MyCart' => 'mycart#mycart'
-	get '/books/products/:product_id' => 'books#show', :as => :book_show
+	get 'book_show/products/:product_id/' => 'books#show', :as => :book_show
 	get '/games/products/:product_id' => 'games#show', :as => :game_show
 
 
