@@ -70,17 +70,20 @@ Booknook::Application.routes.draw do
   	get '/MyCart' => 'mycart#mycart'
 	get 'book_show/products/:product_id/' => 'books#show', :as => :book_show
 	get '/games/products/:product_id' => 'games#show', :as => :game_show
+	get '/electronics/products/:product_id' => 'electronics#show', :as => :electronics_show
 
 
 
 	resources :carts
 	resources :games
+	resources :electronics
 	resources :products do
 		resources :categories
 	end
 
 	post '/products/:product_id/categories/:id(.:format)' => 'products#show_products_page', :as => :show_products_page
-        post 'add_to_cart_path/:book_id' => 'carts#add_to_cart', :as => :add_to_cart
+        #post 'add_to_cart_path/:book_id' => 'carts#add_to_cart', :as => :add_to_cart
+        post 'add_to_cart_path/:product_id' => 'carts#add_to_cart', :as => :add_to_cart
 	devise_for :users
 
 end

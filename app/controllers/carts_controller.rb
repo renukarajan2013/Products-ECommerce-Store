@@ -61,7 +61,7 @@ class CartsController < ApplicationController
 def add_to_cart
 
 	@cart = initialize_cart
-  	@cart_item = CartItem.create!(:book_id => params[:book_id])
+  	@cart_item = CartItem.create!(:product_id => params[:product_id])
 	@cart_item.update(cart_id: @cart.id)
 	@cart_item.save
   	redirect_to edit_cart_url(@cart), alert: 'Cart was successfully updated.'

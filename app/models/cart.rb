@@ -5,8 +5,8 @@ class Cart < ActiveRecord::Base
 		 total_price = 0 
 		 @cart_items = CartItem.where(cart_id: self.id)
 		 @cart_items.each do |cart_item|
-		 	@book = Book.where(id: cart_item.book_id).first
-			total_price += @book.price
+		 	@product= Product.where(id: cart_item.product_id).first
+			total_price += @product.price
 		 end
 		 total_price			
 	end

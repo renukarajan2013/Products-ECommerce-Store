@@ -11,8 +11,9 @@
                  AboutUs GET    /AboutUs(.:format)                                  about#about
                   browse GET    /Browse(.:format)                                   products#browse
                   MyCart GET    /MyCart(.:format)                                   mycart#mycart
-               book_show GET    /book_show/:product_id(.:format)                    books#show
+               book_show GET    /book_show/products/:product_id(.:format)           books#show
                game_show GET    /games/products/:product_id(.:format)               games#show
+        electronics_show GET    /electronics/products/:product_id(.:format)         electronics#show
                    carts GET    /carts(.:format)                                    carts#index
                          POST   /carts(.:format)                                    carts#create
                 new_cart GET    /carts/new(.:format)                                carts#new
@@ -29,6 +30,14 @@
                          PATCH  /games/:id(.:format)                                games#update
                          PUT    /games/:id(.:format)                                games#update
                          DELETE /games/:id(.:format)                                games#destroy
+             electronics GET    /electronics(.:format)                              electronics#index
+                         POST   /electronics(.:format)                              electronics#create
+          new_electronic GET    /electronics/new(.:format)                          electronics#new
+         edit_electronic GET    /electronics/:id/edit(.:format)                     electronics#edit
+              electronic GET    /electronics/:id(.:format)                          electronics#show
+                         PATCH  /electronics/:id(.:format)                          electronics#update
+                         PUT    /electronics/:id(.:format)                          electronics#update
+                         DELETE /electronics/:id(.:format)                          electronics#destroy
       product_categories GET    /products/:product_id/categories(.:format)          categories#index
                          POST   /products/:product_id/categories(.:format)          categories#create
     new_product_category GET    /products/:product_id/categories/new(.:format)      categories#new
@@ -46,7 +55,7 @@
                          PUT    /products/:id(.:format)                             products#update
                          DELETE /products/:id(.:format)                             products#destroy
       show_products_page POST   /products/:product_id/categories/:id(.:format)      products#show_products_page
-             add_to_cart POST   /add_to_cart_path/:book_id(.:format)                carts#add_to_cart
+             add_to_cart POST   /add_to_cart_path/products/:product_id(.:format)    carts#add_to_cart
         new_user_session GET    /users/sign_in(.:format)                            devise/sessions#new
             user_session POST   /users/sign_in(.:format)                            devise/sessions#create
     destroy_user_session DELETE /users/sign_out(.:format)                           devise/sessions#destroy
