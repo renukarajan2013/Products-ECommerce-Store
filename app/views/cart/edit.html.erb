@@ -1,0 +1,7 @@
+<h2>Your cart</h2>
+<ul>
+	<%@cart.cart_item.each do |item| %>
+		<li><%=item.book.name%></li>
+	<%end%>
+
+</ul>

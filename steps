@@ -1,0 +1,38 @@
+Get the cart object from session - Done Pass book id from browse page to edit_carts_path(@cart) - Done
+in cart.edit
+	create a cart_item using book id - Done
+	add the cart_item to the cart (bump number of cart items by 1) - TO DO 
+   	Update total price in the cart. - TO DO 	
+	redirect to show carts page to display the cart items - Done
+
+
+
+Call cart_items.create (using cart_items post) in browse.html - create a new route with cart_items/book_id.
+modify cart model to have an add_book method
+cart_items.create will create itself and add itself to cart by calling the add_book method on cart model.  add_book will also bump cart_item.qty by 1
+Modify carts.show html to display the items in the current cart
+
+
+
+add to cart => /books/:book_id/cart_items, calls cart_items#create
+In create, get the cart from the session and add cart_items to cart = MISSIN
+
+
+redirect to carts.show
+
+
+
+
+
+
+Got it to create the cart item
+add cart item to cart
+redirect to cart.show page 
+
+
+
+
+
+
+
+

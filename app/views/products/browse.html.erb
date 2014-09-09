@@ -1,0 +1,33 @@
+<%- model_class_product = Product -%>
+<%- model_class_product = Book -%>
+<%- model_class_category = Category -%>
+<div class="page-header">
+  <h1>Popular</h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class_product.human_attribute_name(:name) %></th>
+      <th><%= model_class_product.human_attribute_name(:price) %></th>
+      <th><%= model_class_category.human_attribute_name(:category) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @products.each do |product| %>
+	    <% @category = Category.where(id: product.category_id).first%>
+	      <tr>
+		 <td><%= link_to product.name, show_products_page_path(product, @category), :action => :show_products_page, :method => :post%></td>
+	         <td><%= number_to_currency(product.price)%></td>
+        	 <td><%= @category.category%></td>
+ <td>
+          <%= link_to t('.addtocart', :default => t("helpers.links.Add to Cart")),
+add_to_cart_path(product), :method => :post, :class => 'btn btn-mini' %>
+        </td>
+	      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_product_path,
+            :class => 'btn btn-primary' %>

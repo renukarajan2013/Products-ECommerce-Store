@@ -1,0 +1,10 @@
+<div class="cart_title">Your Cart</div>
+<table>
+	<%@cart.cart_items.each do |item| %>
+			<%=book = Book.where(id: item.book_id).first%>
+		<tr>
+			<td><%=book.name%> <td>
+
+		</tr>
+	<%end%>
+</table>

@@ -1,0 +1,29 @@
+<%- model_class = Book -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.new', 'New %{model}'], :model => model_class.model_name.human.titleize %></h1>
+</div>
+
+
+<%= form_for :book, url: books_path do |f| %>
+  <p> 
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+          
+  <p>    
+    <%= f.label :author %><br>
+    <%= f.text_area :author %>
+  </p>       
+
+  <p>    
+    <%= f.label :price%><br>
+    <%= f.text_field :price  %>
+  </p>       
+
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %> 
+
+#<%= link_to 'Back', books_path %>

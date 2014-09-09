@@ -1,0 +1,35 @@
+<%- model_class = Cart -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
+        <%total_items=0%>
+	<%@cart= Cart.find(params[:id])%>
+	<%@cart.cart_items.each do |cart_item| %>
+	<%book = Book.where(id: cart_item.book_id).first%>
+	<%total_items+=total_items%>
+
+<table>
+		<tr>
+			<td><%=book.name%> <td>
+
+		</tr>
+	<%end%>
+
+		<tr class="total_line">
+			<td col span = "2">Total Price</td>
+			<td class="total_cell"><%= number_to_currency(@cart.total_price)%></td>
+		
+		</tr>
+		<tr class="total_line">
+			<td col span = "2">Total books in your cart</td>
+			<td class="total_cell"><%= total_items%></td>
+		</tr>	
+</table>
+
+	
+
+
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              carts_path, :class => 'btn btn-default'  %>
+
+
