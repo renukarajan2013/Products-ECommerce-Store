@@ -70310,3 +70310,331 @@ NoMethodError (undefined method `id' for 21:Fixnum):
 
 
 Started GET "/Browse" for 127.0.0.1 at 2014-09-09 15:21:11 -0500
+Processing by ProductsController#browse as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 2  ORDER BY "categories"."id" ASC LIMIT 1[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 1  ORDER BY "categories"."id" ASC LIMIT 1
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 5  ORDER BY "categories"."id" ASC LIMIT 1[0m
+  Rendered products/browse.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 148ms (Views: 125.6ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/add_to_cart_path/5" for 127.0.0.1 at 2014-09-09 15:21:13 -0500
+Processing by CartsController#add_to_cart as HTML
+  Parameters: {"authenticity_token"=>"fZ9WpUei2NXblznOC4xMpqVJrocVfxB4AyJS8zSf7wY=", "product_id"=>"5"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "carts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2014-09-09 20:21:13.524500"], ["updated_at", "2014-09-09 20:21:13.524500"]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "cart_items" ("created_at", "product_id") VALUES (?, ?)[0m  [["created_at", "2014-09-09 20:21:13.577015"], ["product_id", 5]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "cart_items" SET "cart_id" = ? WHERE "cart_items"."id" = 8  [["cart_id", 22]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/carts/22/edit
+Completed 302 Found in 64ms (ActiveRecord: 6.1ms)
+
+
+Started GET "/carts/22/edit" for 127.0.0.1 at 2014-09-09 15:21:13 -0500
+Processing by CartsController#edit as HTML
+  Parameters: {"id"=>"22"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT  "carts".* FROM "carts"  WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 22]]
+  [1m[35mCartItem Load (0.2ms)[0m  SELECT "cart_items".* FROM "cart_items"  WHERE "cart_items"."cart_id" = 22
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products"  WHERE "products"."id" = 5  ORDER BY "products"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "cart_items".* FROM "cart_items"  WHERE "cart_items"."cart_id" = 22
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "products".* FROM "products"  WHERE "products"."id" = 5  ORDER BY "products"."id" ASC LIMIT 1[0m
+  Rendered carts/edit.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 108ms (Views: 104.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/Browse" for 127.0.0.1 at 2014-09-09 15:21:19 -0500
+Processing by ProductsController#browse as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 2  ORDER BY "categories"."id" ASC LIMIT 1
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 1  ORDER BY "categories"."id" ASC LIMIT 1[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 5  ORDER BY "categories"."id" ASC LIMIT 1
+  Rendered products/browse.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 110ms (Views: 106.8ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/add_to_cart_path/8" for 127.0.0.1 at 2014-09-09 15:21:21 -0500
+Processing by CartsController#add_to_cart as HTML
+  Parameters: {"authenticity_token"=>"fZ9WpUei2NXblznOC4xMpqVJrocVfxB4AyJS8zSf7wY=", "product_id"=>"8"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mCart Load (0.1ms)[0m  SELECT  "carts".* FROM "carts"  WHERE "carts"."id" = ? LIMIT 1  [["id", 22]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "cart_items" ("created_at", "product_id") VALUES (?, ?)  [["created_at", "2014-09-09 20:21:21.162356"], ["product_id", 8]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "cart_items" SET "cart_id" = ? WHERE "cart_items"."id" = 9[0m  [["cart_id", 22]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/carts/22/edit
+Completed 302 Found in 11ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/carts/22/edit" for 127.0.0.1 at 2014-09-09 15:21:21 -0500
+Processing by CartsController#edit as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mCart Load (0.1ms)[0m  SELECT  "carts".* FROM "carts"  WHERE "carts"."id" = ? LIMIT 1  [["id", 22]]
+  [1m[36mCartItem Load (0.2ms)[0m  [1mSELECT "cart_items".* FROM "cart_items"  WHERE "cart_items"."cart_id" = 22[0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products"  WHERE "products"."id" = 5  ORDER BY "products"."id" ASC LIMIT 1
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products"  WHERE "products"."id" = 8  ORDER BY "products"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "cart_items".* FROM "cart_items"  WHERE "cart_items"."cart_id" = 22
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "products".* FROM "products"  WHERE "products"."id" = 5  ORDER BY "products"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "products".* FROM "products"  WHERE "products"."id" = 8  ORDER BY "products"."id" ASC LIMIT 1
+  Rendered carts/edit.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 117ms (Views: 114.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/carts/22/Browse" for 127.0.0.1 at 2014-09-09 15:27:52 -0500
+
+ActionController::RoutingError (No route matches [GET] "/carts/22/Browse"):
+  actionpack (4.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.4) lib/rails/engine.rb:514:in `call'
+  railties (4.1.4) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/renukarajan/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/renukarajan/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/renukarajan/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.6ms)
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.3ms)
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (52.8ms)
+
+
+Started GET "/carts/22/Browse" for 127.0.0.1 at 2014-09-09 15:27:52 -0500
+
+ActionController::RoutingError (No route matches [GET] "/carts/22/Browse"):
+  actionpack (4.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.4) lib/rails/engine.rb:514:in `call'
+  railties (4.1.4) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/renukarajan/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/renukarajan/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/renukarajan/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (9.2ms)
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (56.8ms)
+
+
+Started GET "/Browse" for 127.0.0.1 at 2014-09-09 15:27:57 -0500
+Processing by ProductsController#browse as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 2  ORDER BY "categories"."id" ASC LIMIT 1[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 1  ORDER BY "categories"."id" ASC LIMIT 1
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 5  ORDER BY "categories"."id" ASC LIMIT 1[0m
+  Rendered products/browse.html.erb within layouts/application (24.1ms)
+Completed 500 Internal Server Error in 223ms
+
+ActionView::Template::Error (undefined local variable or method `mycart_path' for #<#<Class:0x007ffa4be660c0>:0x007ffa4be771e0>):
+    65:             <ul class="nav nav-list">
+    66:               <li class="nav-header"></li>
+    67:               <li><%= link_to "Browse Popular Products", browse_path  %></li>
+    68:               <li><%= link_to "MyCart", mycart_path  %></li>
+    69: 		<% if user_signed_in? %>
+    70: 		  Logged in as <strong><%= current_user.email %></strong>.
+    71: 		  <li><%= link_to 'Edit profile', edit_user_registration_path %></li> 
+  app/views/layouts/application.html.erb:68:in `_app_views_layouts_application_html_erb___2395320919274152506_70356496035940'
+
+
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (12.9ms)
+
+
+Started GET "/Browse" for 127.0.0.1 at 2014-09-09 15:29:05 -0500
+Processing by ProductsController#browse as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 2  ORDER BY "categories"."id" ASC LIMIT 1
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 1  ORDER BY "categories"."id" ASC LIMIT 1[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 5  ORDER BY "categories"."id" ASC LIMIT 1
+  Rendered products/browse.html.erb within layouts/application (7.9ms)
+Completed 500 Internal Server Error in 139ms
+
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::MyCart_path):
+    65:             <ul class="nav nav-list">
+    66:               <li class="nav-header"></li>
+    67:               <li><%= link_to "Browse Popular Products", browse_path  %></li>
+    68:               <li><%= link_to "MyCart", MyCart_path  %></li>
+    69: 		<% if user_signed_in? %>
+    70: 		  Logged in as <strong><%= current_user.email %></strong>.
+    71: 		  <li><%= link_to 'Edit profile', edit_user_registration_path %></li> 
+  app/views/layouts/application.html.erb:68:in `_app_views_layouts_application_html_erb___2395320919274152506_70356496187040'
+
+
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (13.0ms)
+
+
+Started GET "/Browse" for 127.0.0.1 at 2014-09-09 15:29:55 -0500
+Processing by ProductsController#browse as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 2  ORDER BY "categories"."id" ASC LIMIT 1[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 1  ORDER BY "categories"."id" ASC LIMIT 1
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 5  ORDER BY "categories"."id" ASC LIMIT 1[0m
+  Rendered products/browse.html.erb within layouts/application (8.4ms)
+Completed 500 Internal Server Error in 161ms
+
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::MyCart_url):
+    65:             <ul class="nav nav-list">
+    66:               <li class="nav-header"></li>
+    67:               <li><%= link_to "Browse Popular Products", browse_url  %></li>
+    68:               <li><%= link_to "MyCart", MyCart_url%></li>
+    69: 		<% if user_signed_in? %>
+    70: 		  Logged in as <strong><%= current_user.email %></strong>.
+    71: 		  <li><%= link_to 'Edit profile', edit_user_registration_path %></li> 
+  app/views/layouts/application.html.erb:68:in `_app_views_layouts_application_html_erb___2395320919274152506_70356510973320'
+
+
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/renukarajan/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (12.7ms)
+
+
+Started GET "/Browse" for 127.0.0.1 at 2014-09-09 15:30:55 -0500
+Processing by ProductsController#browse as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 2  ORDER BY "categories"."id" ASC LIMIT 1
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 1  ORDER BY "categories"."id" ASC LIMIT 1[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 5  ORDER BY "categories"."id" ASC LIMIT 1
+  Rendered products/browse.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 195ms (Views: 172.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/MyCart" for 127.0.0.1 at 2014-09-09 15:30:58 -0500
+Processing by MycartController#mycart as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mCart Load (0.1ms)[0m  SELECT  "carts".* FROM "carts"  WHERE "carts"."id" = ? LIMIT 1  [["id", 22]]
+Redirected to http://localhost:3000/carts/22/edit
+Completed 302 Found in 11ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/carts/22/edit" for 127.0.0.1 at 2014-09-09 15:30:58 -0500
+Processing by CartsController#edit as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mCart Load (0.1ms)[0m  SELECT  "carts".* FROM "carts"  WHERE "carts"."id" = ? LIMIT 1  [["id", 22]]
+  [1m[36mCartItem Load (0.2ms)[0m  [1mSELECT "cart_items".* FROM "cart_items"  WHERE "cart_items"."cart_id" = 22[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products"  WHERE "products"."id" = 5  ORDER BY "products"."id" ASC LIMIT 1
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  "products".* FROM "products"  WHERE "products"."id" = 8  ORDER BY "products"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "cart_items".* FROM "cart_items"  WHERE "cart_items"."cart_id" = 22
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "products".* FROM "products"  WHERE "products"."id" = 5  ORDER BY "products"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "products".* FROM "products"  WHERE "products"."id" = 8  ORDER BY "products"."id" ASC LIMIT 1
+  Rendered carts/edit.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 117ms (Views: 110.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/Browse" for 127.0.0.1 at 2014-09-09 15:31:01 -0500
+Processing by ProductsController#browse as HTML
+  Parameters: {"authenticity_token"=>"fZ9WpUei2NXblznOC4xMpqVJrocVfxB4AyJS8zSf7wY="}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 2  ORDER BY "categories"."id" ASC LIMIT 1[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 1  ORDER BY "categories"."id" ASC LIMIT 1
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 5  ORDER BY "categories"."id" ASC LIMIT 1[0m
+  Rendered products/browse.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 121ms (Views: 117.7ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/products/8/categories/1" for 127.0.0.1 at 2014-09-09 15:31:02 -0500
+Processing by ProductsController#show_products_page as HTML
+  Parameters: {"authenticity_token"=>"fZ9WpUei2NXblznOC4xMpqVJrocVfxB4AyJS8zSf7wY=", "product_id"=>"8", "id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 1  ORDER BY "categories"."id" ASC LIMIT 1[0m
+Redirected to http://localhost:3000/book_show/products/8
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/book_show/products/8" for 127.0.0.1 at 2014-09-09 15:31:02 -0500
+Processing by BooksController#show as HTML
+  Parameters: {"product_id"=>"8"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT  "carts".* FROM "carts"  WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 22]]
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products"  WHERE "products"."id" = 8  ORDER BY "products"."id" ASC LIMIT 1
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books"  WHERE "books"."product_id" = '8'  ORDER BY "books"."id" ASC LIMIT 1[0m
+  Rendered books/show.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 104ms (Views: 100.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/MyCart" for 127.0.0.1 at 2014-09-09 15:31:04 -0500
+Processing by MycartController#mycart as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT  "carts".* FROM "carts"  WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 22]]
+Redirected to http://localhost:3000/carts/22/edit
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/carts/22/edit" for 127.0.0.1 at 2014-09-09 15:31:04 -0500
+Processing by CartsController#edit as HTML
+  Parameters: {"id"=>"22"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT  "carts".* FROM "carts"  WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 22]]
+  [1m[35mCartItem Load (0.1ms)[0m  SELECT "cart_items".* FROM "cart_items"  WHERE "cart_items"."cart_id" = 22
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  "products".* FROM "products"  WHERE "products"."id" = 5  ORDER BY "products"."id" ASC LIMIT 1[0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products"  WHERE "products"."id" = 8  ORDER BY "products"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "cart_items".* FROM "cart_items"  WHERE "cart_items"."cart_id" = 22[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "products".* FROM "products"  WHERE "products"."id" = 5  ORDER BY "products"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "products".* FROM "products"  WHERE "products"."id" = 8  ORDER BY "products"."id" ASC LIMIT 1[0m
+  Rendered carts/edit.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 108ms (Views: 105.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/Browse" for 127.0.0.1 at 2014-09-09 15:31:05 -0500
+Processing by ProductsController#browse as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 2  ORDER BY "categories"."id" ASC LIMIT 1
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 1  ORDER BY "categories"."id" ASC LIMIT 1[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories"  WHERE "categories"."id" = 5  ORDER BY "categories"."id" ASC LIMIT 1
+  Rendered products/browse.html.erb within layouts/application (11.2ms)

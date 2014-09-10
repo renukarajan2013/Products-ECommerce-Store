@@ -6,7 +6,7 @@ end
 
 def show_products_page
 	@category = Category.where(id: params[:id]).first.category
-	#Ugly code, find a better way
+	#YUCK!!!
 	if (@category == 'Books')
 		redirect_to book_show_path(params[:product_id])
 	elsif (@category == 'Games')
