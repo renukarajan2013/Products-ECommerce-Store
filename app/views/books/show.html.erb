@@ -16,7 +16,7 @@
   </thead>
   <tbody>
     <tr>
-	<% @book = Book.where(product_id: params[:product_id]).first%>
+  	<%@book= Book.where(product_id: params[:product_id]).first%>
         <td><%= @book.id%></td>
         <td><%= @product.name %></td>
         <td><%= @book.author %></td>

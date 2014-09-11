@@ -42,6 +42,8 @@ gem 'therubyracer'
 gem 'less-rails'
 gem 'twitter-bootstrap-rails', '3.2.0'
 gem 'devise'
+gem 'carrierwave'
+gem 'rmagick', require: false
 
 group :development, :test do
 	gem 'rspec-rails'

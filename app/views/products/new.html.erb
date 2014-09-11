@@ -1,0 +1,35 @@
+<%- model_class = Product-%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.new', 'New %{model}'], :model => model_class.model_name.human.titleize %></h1>
+</div>
+
+
+<%= form_for :product, :html => {:multipart => true},  url: products_path do |f| %>
+  <p> 
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+          
+
+  <p>    
+    <%= f.label :price%><br>
+    <%= f.text_field :price  %>
+  </p>       
+
+
+  <p>    
+    <%= f.label :category_id%><br>
+    <%= f.text_field :category_id%>
+  </p>       
+
+  <p>    
+    <%= f.label :image%><br>
+    <%= f.file_field :image%>
+  </p>       
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %> 
+
+<%= link_to 'Back', '#'%>

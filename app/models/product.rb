@@ -4,4 +4,6 @@ class Product < ActiveRecord::Base
 	has_many :games
 	has_many :electronics
 
+	mount_uploader :image, ImageUploader
+
 end
