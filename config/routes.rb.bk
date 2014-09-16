@@ -1,11 +1,7 @@
 Rails.application.routes.draw do
-  resources :cart_items
 
-  resources :carts
 
-  get 'order/cart'
-
-  get 'welcome/index'
+#  get 'welcome/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -63,29 +59,35 @@ Rails.application.routes.draw do
   #   end
 
 Booknook::Application.routes.draw do
-  resources :cart_items
 
-  resources :carts
 
-  get 'order/cart'
-
-	resources :books
-	root 'welcome#index'
-
-	resources :carts
+	resources :products
+	root 'products#index'
 
   	get '/AboutUs' => 'about#about'
-  	get '/Browse' => 'browse#browse'
-#  	get '/Orders' => 'order#cart'
+  	#get '/Browse' => 'browse#browse'
+  	get '/Browse' => 'products#browse', :as => :browse
+  	get '/MyCart' => 'mycart#mycart', :as => :mycart
+	get 'book_show/products/:product_id/' => 'books#show', :as => :book_show
+	get '/games/products/:product_id' => 'games#show', :as => :game_show
+	get '/electronics/products/:product_id' => 'electronics#show', :as => :electronics_show
 
-	resources :orders
-#	get 'orders/:book.id/new' => 'orders#cart'
 
 
-	resources :books do
-		resources :carts
-	end	
-	
+	resources :carts
+	resources :games
+	resources :electronics
+	resources :products do
+		resources :categories
+	end
+
+	resources :music, controller: 'products', type: 'Music' 
+
+	post '/products/:product_id/categories/:id(.:format)' => 'products#show_products_page', :as => :show_products_page
+        #post 'add_to_cart_path/:book_id' => 'carts#add_to_cart', :as => :add_to_cart
+        post 'add_to_cart_path/:product_id' => 'carts#add_to_cart', :as => :add_to_cart
+	devise_for :users
+
 end
 end
 

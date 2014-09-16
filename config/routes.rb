@@ -61,8 +61,8 @@ Rails.application.routes.draw do
 Booknook::Application.routes.draw do
 
 
-	resources :books
-	root 'welcome#index'
+	resources :products
+	root 'products#index'
 
   	get '/AboutUs' => 'about#about'
   	#get '/Browse' => 'browse#browse'
@@ -80,6 +80,9 @@ Booknook::Application.routes.draw do
 	resources :products do
 		resources :categories
 	end
+
+	resources :music, controller: 'products', type: 'Music' 
+	resources :books, controller: 'products', type: 'Book' 
 
 	post '/products/:product_id/categories/:id(.:format)' => 'products#show_products_page', :as => :show_products_page
         #post 'add_to_cart_path/:book_id' => 'carts#add_to_cart', :as => :add_to_cart

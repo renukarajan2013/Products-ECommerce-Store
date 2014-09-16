@@ -1,16 +1,16 @@
                   Prefix Verb   URI Pattern                                         Controller#Action
-                   books GET    /books(.:format)                                    books#index
-                         POST   /books(.:format)                                    books#create
-                new_book GET    /books/new(.:format)                                books#new
-               edit_book GET    /books/:id/edit(.:format)                           books#edit
-                    book GET    /books/:id(.:format)                                books#show
-                         PATCH  /books/:id(.:format)                                books#update
-                         PUT    /books/:id(.:format)                                books#update
-                         DELETE /books/:id(.:format)                                books#destroy
-                    root GET    /                                                   welcome#index
+                products GET    /products(.:format)                                 products#index
+                         POST   /products(.:format)                                 products#create
+             new_product GET    /products/new(.:format)                             products#new
+            edit_product GET    /products/:id/edit(.:format)                        products#edit
+                 product GET    /products/:id(.:format)                             products#show
+                         PATCH  /products/:id(.:format)                             products#update
+                         PUT    /products/:id(.:format)                             products#update
+                         DELETE /products/:id(.:format)                             products#destroy
+                    root GET    /                                                   products#index
                  AboutUs GET    /AboutUs(.:format)                                  about#about
                   browse GET    /Browse(.:format)                                   products#browse
-                  MyCart GET    /MyCart(.:format)                                   mycart#mycart
+                  mycart GET    /MyCart(.:format)                                   mycart#mycart
                book_show GET    /book_show/products/:product_id(.:format)           books#show
                game_show GET    /games/products/:product_id(.:format)               games#show
         electronics_show GET    /electronics/products/:product_id(.:format)         electronics#show
@@ -46,16 +46,32 @@
                          PATCH  /products/:product_id/categories/:id(.:format)      categories#update
                          PUT    /products/:product_id/categories/:id(.:format)      categories#update
                          DELETE /products/:product_id/categories/:id(.:format)      categories#destroy
-                products GET    /products(.:format)                                 products#index
+                         GET    /products(.:format)                                 products#index
                          POST   /products(.:format)                                 products#create
-             new_product GET    /products/new(.:format)                             products#new
-            edit_product GET    /products/:id/edit(.:format)                        products#edit
-                 product GET    /products/:id(.:format)                             products#show
+                         GET    /products/new(.:format)                             products#new
+                         GET    /products/:id/edit(.:format)                        products#edit
+                         GET    /products/:id(.:format)                             products#show
                          PATCH  /products/:id(.:format)                             products#update
                          PUT    /products/:id(.:format)                             products#update
                          DELETE /products/:id(.:format)                             products#destroy
+             music_index GET    /music(.:format)                                    products#index {:type=>"Music"}
+                         POST   /music(.:format)                                    products#create {:type=>"Music"}
+               new_music GET    /music/new(.:format)                                products#new {:type=>"Music"}
+              edit_music GET    /music/:id/edit(.:format)                           products#edit {:type=>"Music"}
+                   music GET    /music/:id(.:format)                                products#show {:type=>"Music"}
+                         PATCH  /music/:id(.:format)                                products#update {:type=>"Music"}
+                         PUT    /music/:id(.:format)                                products#update {:type=>"Music"}
+                         DELETE /music/:id(.:format)                                products#destroy {:type=>"Music"}
+                   books GET    /books(.:format)                                    products#index {:type=>"Book"}
+                         POST   /books(.:format)                                    products#create {:type=>"Book"}
+                new_book GET    /books/new(.:format)                                products#new {:type=>"Book"}
+               edit_book GET    /books/:id/edit(.:format)                           products#edit {:type=>"Book"}
+                    book GET    /books/:id(.:format)                                products#show {:type=>"Book"}
+                         PATCH  /books/:id(.:format)                                products#update {:type=>"Book"}
+                         PUT    /books/:id(.:format)                                products#update {:type=>"Book"}
+                         DELETE /books/:id(.:format)                                products#destroy {:type=>"Book"}
       show_products_page POST   /products/:product_id/categories/:id(.:format)      products#show_products_page
-             add_to_cart POST   /add_to_cart_path/products/:product_id(.:format)    carts#add_to_cart
+             add_to_cart POST   /add_to_cart_path/:product_id(.:format)             carts#add_to_cart
         new_user_session GET    /users/sign_in(.:format)                            devise/sessions#new
             user_session POST   /users/sign_in(.:format)                            devise/sessions#create
     destroy_user_session DELETE /users/sign_out(.:format)                           devise/sessions#destroy

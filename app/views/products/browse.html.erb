@@ -16,11 +16,10 @@
   </thead>
   <tbody>
     <% @products.each do |product| %>
-	    <% @category = Category.where(id: product.category_id).first%>
 	      <tr>
-		 <td><%= link_to product.name, show_products_page_path(product, @category), :action => :show_products_page, :method => :post%></td>
+		 <td><%= link_to product.name , browse_url, :action => :show_products_page, :method => :post%></td>
 	         <td><%= number_to_currency(product.price)%></td>
-        	 <td><%= @category.category%></td>
+	         <td><%= product.type%></td>
         	 <td><%= image_tag product.image_url(:thumb).to_s%></td>
  <td>
           <%= link_to t('.addtocart', :default => t("helpers.links.Add to Cart")),
