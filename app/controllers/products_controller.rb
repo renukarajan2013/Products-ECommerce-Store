@@ -42,7 +42,11 @@ def update
 end
 
 def index
-	redirect_to browse_url
+	@search = Product.search do
+		fulltext params[:search]
+	end
+	@products = @search.results
+#	@products = Product.all
 end
 
 private

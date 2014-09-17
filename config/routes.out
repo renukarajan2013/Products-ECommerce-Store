@@ -70,6 +70,14 @@
                          PATCH  /books/:id(.:format)                                products#update {:type=>"Book"}
                          PUT    /books/:id(.:format)                                products#update {:type=>"Book"}
                          DELETE /books/:id(.:format)                                products#destroy {:type=>"Book"}
+                         GET    /games(.:format)                                    products#index {:type=>"Game"}
+                         POST   /games(.:format)                                    products#create {:type=>"Game"}
+                         GET    /games/new(.:format)                                products#new {:type=>"Game"}
+                         GET    /games/:id/edit(.:format)                           products#edit {:type=>"Game"}
+                         GET    /games/:id(.:format)                                products#show {:type=>"Game"}
+                         PATCH  /games/:id(.:format)                                products#update {:type=>"Game"}
+                         PUT    /games/:id(.:format)                                products#update {:type=>"Game"}
+                         DELETE /games/:id(.:format)                                products#destroy {:type=>"Game"}
       show_products_page POST   /products/:product_id/categories/:id(.:format)      products#show_products_page
              add_to_cart POST   /add_to_cart_path/:product_id(.:format)             carts#add_to_cart
         new_user_session GET    /users/sign_in(.:format)                            devise/sessions#new

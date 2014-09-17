@@ -1,0 +1,49 @@
+<%- model_class_product = Product -%>
+<%- model_class_product = Book -%>
+<%- model_class_category = Category -%>
+<div class="page-header">
+  <h1>Popular</h1>
+</div>
+<%= form_tag products_path, :method => :get do%>
+	<p>
+		<%=text_field_tag :search, params[:search]%>
+		<%= submit_tag "Search", :name => nil %>
+
+	</p>
+
+<%end%>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class_product.human_attribute_name(:name) %></th>
+      <th><%= model_class_product.human_attribute_name(:price) %></th>
+      <th><%= model_class_category.human_attribute_name(:category) %></th>
+      <th><%= model_class_category.human_attribute_name(:image) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @products.each do |product| %>
+	      <tr>
+		 <td><%= link_to product.name , browse_url, :action => :show_products_page, :method => :post%></td>
+	         <td><%= number_to_currency(product.price)%></td>
+	         <td><%= product.type%></td>
+        	 <td><%= image_tag product.image_url(:thumb).to_s%></td>
+ <td>
+          <%= link_to t('.addtocart', :default => t("helpers.links.Add to Cart")),
+add_to_cart_path(product), :method => :post, :class => 'btn btn-mini' %>
+	  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_product_path(product), :class => 'btn btn-mini' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      product_path(product),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-mini btn-danger' %>
+        </td>
+	      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_product_path,
+            :class => 'btn btn-primary' %>

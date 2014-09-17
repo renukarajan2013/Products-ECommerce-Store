@@ -45,6 +45,10 @@ gem 'devise'
 gem 'carrierwave'
 gem 'rmagick', require: false
 gem 'backup'
+gem 'websolr-rails'
+gem 'sunspot'
+gem 'sunspot_rails'
+gem 'sunspot_solr'
 
 group :development, :test do
 	gem 'rspec-rails'
