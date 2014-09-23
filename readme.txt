@@ -1,3 +1,17 @@
+Ruby version - 2.0
+Rails  - 4.1.4
+Postgres - 9.3.5
+
+Gems:
+Carrierwave
+Devise
+CanCan
+Twitter Bootstrap
+Sunspot
+WebSolr
+RMagick
+
+
 v1.6 Product Features:
 
 1.  Create products and specify what type of product you are creating - Books, Games, Videos etc.  Each product carries an image of the product (implemented using carrierwave gem).
