@@ -1,5 +1,5 @@
 class CartsController < ApplicationController
-  before_action :set_cart, only: [:show, :edit, :update, :destroy]
+  before_action  only: [:show, :edit, :update, :destroy]
 
   # GET /carts
   # GET /carts.json
@@ -21,7 +21,6 @@ class CartsController < ApplicationController
   # POST /carts
   # POST /carts.json
   def create
-    
     respond_to do |format|
       if @cart.save
         format.html { redirect_to @cart, notice: 'Cart was successfully created.' }
@@ -35,13 +34,10 @@ class CartsController < ApplicationController
 
   # PATCH/PUT /carts/1
   # PATCH/PUT /carts/1.json
-
-
-
   def edit
     @cart = initialize_cart
     @carts = Cart.all
-	  @cart_item = CartItem.new
+    @cart_item = CartItem.new
   end
 
 
@@ -58,26 +54,12 @@ class CartsController < ApplicationController
     end
   end
 
-def add_to_cart
-
-	@cart = initialize_cart
-  	@cart_item = CartItem.create!(:product_id => params[:product_id])
-	@cart_item.update(cart_id: @cart.id)
-	@cart_item.save
-  	redirect_to edit_cart_url(@cart), alert: 'Cart was successfully updated.'
-
-end
-
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_cart
-      
-      #@cart = Cart.find(params[:cart_id])
-    end
-
-    # Never trust parameters from the scary internet, only allow the white list through.
-
-
-
+  def add_to_cart
+    @cart = initialize_cart
+    @cart_item = CartItem.create!(:product_id => params[:product_id])
+    @cart_item.update(cart_id: @cart.id)
+    @cart_item.save
+    redirect_to edit_cart_url(@cart), alert: 'Cart was successfully updated.'
+  end
 
 end

@@ -8,9 +8,9 @@
                          PUT    /products/:id(.:format)                             products#update
                          DELETE /products/:id(.:format)                             products#destroy
                     root GET    /                                                   products#index
-                 AboutUs GET    /AboutUs(.:format)                                  about#about
-                  browse GET    /Browse(.:format)                                   products#browse
-                  mycart GET    /MyCart(.:format)                                   mycart#mycart
+                 aboutus GET    /aboutus(.:format)                                  about#about
+                  browse GET    /browse(.:format)                                   products#browse
+                  mycart GET    /mycart(.:format)                                   mycart#mycart
                book_show GET    /book_show/products/:product_id(.:format)           books#show
                game_show GET    /games/products/:product_id(.:format)               games#show
         electronics_show GET    /electronics/products/:product_id(.:format)         electronics#show
@@ -22,6 +22,14 @@
                          PATCH  /carts/:id(.:format)                                carts#update
                          PUT    /carts/:id(.:format)                                carts#update
                          DELETE /carts/:id(.:format)                                carts#destroy
+              cart_items GET    /cart_items(.:format)                               cart_items#index
+                         POST   /cart_items(.:format)                               cart_items#create
+           new_cart_item GET    /cart_items/new(.:format)                           cart_items#new
+          edit_cart_item GET    /cart_items/:id/edit(.:format)                      cart_items#edit
+               cart_item GET    /cart_items/:id(.:format)                           cart_items#show
+                         PATCH  /cart_items/:id(.:format)                           cart_items#update
+                         PUT    /cart_items/:id(.:format)                           cart_items#update
+                         DELETE /cart_items/:id(.:format)                           cart_items#destroy
                    games GET    /games(.:format)                                    games#index
                          POST   /games(.:format)                                    games#create
                 new_game GET    /games/new(.:format)                                games#new
@@ -38,6 +46,22 @@
                          PATCH  /electronics/:id(.:format)                          electronics#update
                          PUT    /electronics/:id(.:format)                          electronics#update
                          DELETE /electronics/:id(.:format)                          electronics#destroy
+             music_index GET    /music(.:format)                                    music#index
+                         POST   /music(.:format)                                    music#create
+               new_music GET    /music/new(.:format)                                music#new
+              edit_music GET    /music/:id/edit(.:format)                           music#edit
+                   music GET    /music/:id(.:format)                                music#show
+                         PATCH  /music/:id(.:format)                                music#update
+                         PUT    /music/:id(.:format)                                music#update
+                         DELETE /music/:id(.:format)                                music#destroy
+                   books GET    /books(.:format)                                    books#index
+                         POST   /books(.:format)                                    books#create
+                new_book GET    /books/new(.:format)                                books#new
+               edit_book GET    /books/:id/edit(.:format)                           books#edit
+                    book GET    /books/:id(.:format)                                books#show
+                         PATCH  /books/:id(.:format)                                books#update
+                         PUT    /books/:id(.:format)                                books#update
+                         DELETE /books/:id(.:format)                                books#destroy
       product_categories GET    /products/:product_id/categories(.:format)          categories#index
                          POST   /products/:product_id/categories(.:format)          categories#create
     new_product_category GET    /products/:product_id/categories/new(.:format)      categories#new
@@ -54,30 +78,6 @@
                          PATCH  /products/:id(.:format)                             products#update
                          PUT    /products/:id(.:format)                             products#update
                          DELETE /products/:id(.:format)                             products#destroy
-             music_index GET    /music(.:format)                                    products#index {:type=>"Music"}
-                         POST   /music(.:format)                                    products#create {:type=>"Music"}
-               new_music GET    /music/new(.:format)                                products#new {:type=>"Music"}
-              edit_music GET    /music/:id/edit(.:format)                           products#edit {:type=>"Music"}
-                   music GET    /music/:id(.:format)                                products#show {:type=>"Music"}
-                         PATCH  /music/:id(.:format)                                products#update {:type=>"Music"}
-                         PUT    /music/:id(.:format)                                products#update {:type=>"Music"}
-                         DELETE /music/:id(.:format)                                products#destroy {:type=>"Music"}
-                   books GET    /books(.:format)                                    products#index {:type=>"Book"}
-                         POST   /books(.:format)                                    products#create {:type=>"Book"}
-                new_book GET    /books/new(.:format)                                products#new {:type=>"Book"}
-               edit_book GET    /books/:id/edit(.:format)                           products#edit {:type=>"Book"}
-                    book GET    /books/:id(.:format)                                products#show {:type=>"Book"}
-                         PATCH  /books/:id(.:format)                                products#update {:type=>"Book"}
-                         PUT    /books/:id(.:format)                                products#update {:type=>"Book"}
-                         DELETE /books/:id(.:format)                                products#destroy {:type=>"Book"}
-                         GET    /games(.:format)                                    products#index {:type=>"Game"}
-                         POST   /games(.:format)                                    products#create {:type=>"Game"}
-                         GET    /games/new(.:format)                                products#new {:type=>"Game"}
-                         GET    /games/:id/edit(.:format)                           products#edit {:type=>"Game"}
-                         GET    /games/:id(.:format)                                products#show {:type=>"Game"}
-                         PATCH  /games/:id(.:format)                                products#update {:type=>"Game"}
-                         PUT    /games/:id(.:format)                                products#update {:type=>"Game"}
-                         DELETE /games/:id(.:format)                                products#destroy {:type=>"Game"}
       show_products_page POST   /products/:product_id/categories/:id(.:format)      products#show_products_page
              add_to_cart POST   /add_to_cart_path/:product_id(.:format)             carts#add_to_cart
         new_user_session GET    /users/sign_in(.:format)                            devise/sessions#new

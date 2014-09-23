@@ -9,8 +9,13 @@
   <dt><strong><%= model_class.human_attribute_name(:price) %>:</strong></dt>
   <dd><%= @product.price %></dd>
   <dt><strong><%= model_class.human_attribute_name(:image) %>:</strong></dt>
-  <dd><%= image_tag @product.image_url(:thumb).to_s%></dd>
+  <dd><%= image_tag @product.image1_url(:thumb).to_s%></dd>
 </dl>
+
+ <div id="product-description" data-hook="product_description">
+ <div data-hook="product_properties">
+      <%= render 'properties' %>
+ </div>
 
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),

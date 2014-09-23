@@ -15,7 +15,7 @@
     </tr>
   </thead>
   <tbody>
-     <% @electronics = Electronics.where(product_id: params[:product_id]).first %>
+    <% @electronics = Electronics.where(product_id: params[:product_id]).first %>
     <% @product = Product.where(id: @electronics.product_id ).first%>
     <tr>
         <td><%= @electronics.id%></td>

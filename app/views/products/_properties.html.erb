@@ -1,0 +1,9 @@
+<% unless @product_properties==nil ||  @product_properties.empty? %>
+    <table style="margin-left: 121px;">
+    <% @product_properties.each do |key, value|  %>
+     <tr><td><input type="text" value="<%= key %>"></td>
+     <td><input type="text" value="<%= value %>"></td></tr>
+    <% end %>
+    </table>
+  </dl>
+<% end %>

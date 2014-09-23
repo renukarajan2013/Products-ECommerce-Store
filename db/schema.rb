@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140914161021) do
+ActiveRecord::Schema.define(version: 20140923130201) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+  enable_extension "hstore"
 
   create_table "Books", force: true do |t|
     t.string  "author"
@@ -43,6 +47,9 @@ ActiveRecord::Schema.define(version: 20140914161021) do
     t.integer  "product_id"
   end
 
+  create_table "carts", force: true do |t|
+  end
+
   create_table "categories", force: true do |t|
     t.string   "category"
     t.datetime "created_at"
@@ -59,11 +66,11 @@ ActiveRecord::Schema.define(version: 20140914161021) do
   create_table "products", force: true do |t|
     t.string   "name"
     t.integer  "price"
+    t.string   "type"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "image"
-    t.string   "type"
-    t.integer  "category_id"
+    t.hstore   "properties"
+    t.string   "images"
   end
 
   create_table "table_electronics", force: true do |t|
@@ -85,7 +92,7 @@ ActiveRecord::Schema.define(version: 20140914161021) do
     t.datetime "updated_at"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
 end

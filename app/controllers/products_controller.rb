@@ -2,12 +2,12 @@ class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
 def browse
-	@products=Product.all
+  @products=Product.all
 end
 
 def show_products_page
-	@category = Category.where(id: params[:id]).first.category
-	redirect_to product_path(params[:product_id])
+  @category = Category.where(id: params[:id]).first.category
+  redirect_to product_path(params[:product_id])
 end
 
 def create
@@ -15,53 +15,41 @@ def create
   if @product.save
     flash[:notice] = 'Record was successfully created.'
   end	
+  redirect_to browse_url
 end
 
-
 def destroy
-  @product= Product.where(id: params[:id]).first
   @product.destroy
- 
   redirect_to browse_path
 end
 
 def show
-  	@product = Product.where(id: params[:id]).first
+  @product_properties = @product.properties
 end
-
 
 def edit
-  #	@product = Product.where(id: params[:id]).first
- @product = eval("#{params[:controller].classify}.find(params[:id])")
+  @product_properties = @product.properties
 end
 
-
 def update
-	@product = type.find(params[:id])
-	@product.update_attributes(product_params)
+  @product.update_attributes(product_params)
 end
 
 def index
-	@search = Product.search do
-		fulltext params[:search]
-	end
-	@products = @search.results
-#	@products = Product.all
+  @search = Product.search do
+    fulltext params[:search]
+  end
+  @products = @search.results
 end
 
 private
-
-
-   def set_product
-    #@product = type.find(params[:id])
-	@product= eval("#{params[:controller].classify}.find(params[:id])")
-  end
-
-
-
+def set_product
+  @product = Product.where(id: params[:id]).first
 end
 
-  def product_params
-    params.require(:product).permit(:name, :price, :type, :image)
-  end
+def product_params
+  params.require(:product).permit(:name, :price, :type, :image1)
+end
+
+end
 

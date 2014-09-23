@@ -7,6 +7,10 @@ v1.6 Product Features:
 5.  Users will be authenticated.
 6.  Users will be authorized - Implemented using the CanCan gem.  Roles supported are Admin and Supervisor (and Guest).
 7.  Supports full text search using web solr
+8.  Supports extra attributes for products - key value pairs
+9.  Now has an rspec test for music routing
+
+
 
 Project is implemented using Rails Single Table Inheritance given the is-a relationship among the objects in the application. The parent object - Product has several subclasses that inherit most of the features of the parent class with a few extra attributes that are specific to each subclass.  STI is the best design paradigm for this requirement as there would be a lot of repitition/redundancy if each subclass were to have its own table.
 

@@ -1,4 +1,3 @@
 class Music < Product
-
 	
 end

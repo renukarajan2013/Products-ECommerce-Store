@@ -1,57 +1,97 @@
-                  Prefix Verb   URI Pattern                                     Controller#Action
-              order_cart GET    /order/cart(.:format)                           order#cart
-           welcome_index GET    /welcome/index(.:format)                        welcome#index
-                         GET    /order/cart(.:format)                           order#cart
-                   books GET    /books(.:format)                                books#index
-                         POST   /books(.:format)                                books#create
-                new_book GET    /books/new(.:format)                            books#new
-               edit_book GET    /books/:id/edit(.:format)                       books#edit
-                    book GET    /books/:id(.:format)                            books#show
-                         PATCH  /books/:id(.:format)                            books#update
-                         PUT    /books/:id(.:format)                            books#update
-                         DELETE /books/:id(.:format)                            books#destroy
-                    root GET    /                                               welcome#index
-                 AboutUs GET    /AboutUs(.:format)                              about#about
-                  browse GET    /Browse(.:format)                               products#browse
-                  MyCart GET    /MyCart(.:format)                               mycart#mycart
-                  orders GET    /orders(.:format)                               orders#index
-                         POST   /orders(.:format)                               orders#create
-               new_order GET    /orders/new(.:format)                           orders#new
-              edit_order GET    /orders/:id/edit(.:format)                      orders#edit
-                   order GET    /orders/:id(.:format)                           orders#show
-                         PATCH  /orders/:id(.:format)                           orders#update
-                         PUT    /orders/:id(.:format)                           orders#update
-                         DELETE /orders/:id(.:format)                           orders#destroy
-                   carts GET    /carts(.:format)                                carts#index
-                         POST   /carts(.:format)                                carts#create
-                new_cart GET    /carts/new(.:format)                            carts#new
-               edit_cart GET    /carts/:id/edit(.:format)                       carts#edit
-                    cart GET    /carts/:id(.:format)                            carts#show
-                         PATCH  /carts/:id(.:format)                            carts#update
-                         PUT    /carts/:id(.:format)                            carts#update
-                         DELETE /carts/:id(.:format)                            carts#destroy
-                   games GET    /games(.:format)                                games#index
-                         POST   /games(.:format)                                games#create
-                new_game GET    /games/new(.:format)                            games#new
-               edit_game GET    /games/:id/edit(.:format)                       games#edit
-                    game GET    /games/:id(.:format)                            games#show
-                         PATCH  /games/:id(.:format)                            games#update
-                         PUT    /games/:id(.:format)                            games#update
-                         DELETE /games/:id(.:format)                            games#destroy
-      show_products_page POST   /show_products_page_path/:category_id(.:format) products#show_products_page
-             add_to_cart POST   /add_to_cart_path/:book_id(.:format)            carts#add_to_cart
-        new_user_session GET    /users/sign_in(.:format)                        devise/sessions#new
-            user_session POST   /users/sign_in(.:format)                        devise/sessions#create
-    destroy_user_session DELETE /users/sign_out(.:format)                       devise/sessions#destroy
-           user_password POST   /users/password(.:format)                       devise/passwords#create
-       new_user_password GET    /users/password/new(.:format)                   devise/passwords#new
-      edit_user_password GET    /users/password/edit(.:format)                  devise/passwords#edit
-                         PATCH  /users/password(.:format)                       devise/passwords#update
-                         PUT    /users/password(.:format)                       devise/passwords#update
-cancel_user_registration GET    /users/cancel(.:format)                         devise/registrations#cancel
-       user_registration POST   /users(.:format)                                devise/registrations#create
-   new_user_registration GET    /users/sign_up(.:format)                        devise/registrations#new
-  edit_user_registration GET    /users/edit(.:format)                           devise/registrations#edit
-                         PATCH  /users(.:format)                                devise/registrations#update
-                         PUT    /users(.:format)                                devise/registrations#update
-                         DELETE /users(.:format)                                devise/registrations#destroy
+                  Prefix Verb   URI Pattern                                         Controller#Action
+                products GET    /products(.:format)                                 products#index
+                         POST   /products(.:format)                                 products#create
+             new_product GET    /products/new(.:format)                             products#new
+            edit_product GET    /products/:id/edit(.:format)                        products#edit
+                 product GET    /products/:id(.:format)                             products#show
+                         PATCH  /products/:id(.:format)                             products#update
+                         PUT    /products/:id(.:format)                             products#update
+                         DELETE /products/:id(.:format)                             products#destroy
+                    root GET    /                                                   products#index
+                 AboutUs GET    /AboutUs(.:format)                                  about#about
+                  browse GET    /Browse(.:format)                                   products#browse
+                  mycart GET    /MyCart(.:format)                                   mycart#mycart
+               book_show GET    /book_show/products/:product_id(.:format)           books#show
+               game_show GET    /games/products/:product_id(.:format)               games#show
+        electronics_show GET    /electronics/products/:product_id(.:format)         electronics#show
+                   carts GET    /carts(.:format)                                    carts#index
+                         POST   /carts(.:format)                                    carts#create
+                new_cart GET    /carts/new(.:format)                                carts#new
+               edit_cart GET    /carts/:id/edit(.:format)                           carts#edit
+                    cart GET    /carts/:id(.:format)                                carts#show
+                         PATCH  /carts/:id(.:format)                                carts#update
+                         PUT    /carts/:id(.:format)                                carts#update
+                         DELETE /carts/:id(.:format)                                carts#destroy
+                   games GET    /games(.:format)                                    games#index
+                         POST   /games(.:format)                                    games#create
+                new_game GET    /games/new(.:format)                                games#new
+               edit_game GET    /games/:id/edit(.:format)                           games#edit
+                    game GET    /games/:id(.:format)                                games#show
+                         PATCH  /games/:id(.:format)                                games#update
+                         PUT    /games/:id(.:format)                                games#update
+                         DELETE /games/:id(.:format)                                games#destroy
+             electronics GET    /electronics(.:format)                              electronics#index
+                         POST   /electronics(.:format)                              electronics#create
+          new_electronic GET    /electronics/new(.:format)                          electronics#new
+         edit_electronic GET    /electronics/:id/edit(.:format)                     electronics#edit
+              electronic GET    /electronics/:id(.:format)                          electronics#show
+                         PATCH  /electronics/:id(.:format)                          electronics#update
+                         PUT    /electronics/:id(.:format)                          electronics#update
+                         DELETE /electronics/:id(.:format)                          electronics#destroy
+      product_categories GET    /products/:product_id/categories(.:format)          categories#index
+                         POST   /products/:product_id/categories(.:format)          categories#create
+    new_product_category GET    /products/:product_id/categories/new(.:format)      categories#new
+   edit_product_category GET    /products/:product_id/categories/:id/edit(.:format) categories#edit
+        product_category GET    /products/:product_id/categories/:id(.:format)      categories#show
+                         PATCH  /products/:product_id/categories/:id(.:format)      categories#update
+                         PUT    /products/:product_id/categories/:id(.:format)      categories#update
+                         DELETE /products/:product_id/categories/:id(.:format)      categories#destroy
+                         GET    /products(.:format)                                 products#index
+                         POST   /products(.:format)                                 products#create
+                         GET    /products/new(.:format)                             products#new
+                         GET    /products/:id/edit(.:format)                        products#edit
+                         GET    /products/:id(.:format)                             products#show
+                         PATCH  /products/:id(.:format)                             products#update
+                         PUT    /products/:id(.:format)                             products#update
+                         DELETE /products/:id(.:format)                             products#destroy
+             music_index GET    /music(.:format)                                    music#index {:type=>"Music"}
+                         POST   /music(.:format)                                    music#create {:type=>"Music"}
+               new_music GET    /music/new(.:format)                                music#new {:type=>"Music"}
+              edit_music GET    /music/:id/edit(.:format)                           music#edit {:type=>"Music"}
+                   music GET    /music/:id(.:format)                                music#show {:type=>"Music"}
+                         PATCH  /music/:id(.:format)                                music#update {:type=>"Music"}
+                         PUT    /music/:id(.:format)                                music#update {:type=>"Music"}
+                         DELETE /music/:id(.:format)                                music#destroy {:type=>"Music"}
+                   books GET    /books(.:format)                                    products#index {:type=>"Book"}
+                         POST   /books(.:format)                                    products#create {:type=>"Book"}
+                new_book GET    /books/new(.:format)                                products#new {:type=>"Book"}
+               edit_book GET    /books/:id/edit(.:format)                           products#edit {:type=>"Book"}
+                    book GET    /books/:id(.:format)                                products#show {:type=>"Book"}
+                         PATCH  /books/:id(.:format)                                products#update {:type=>"Book"}
+                         PUT    /books/:id(.:format)                                products#update {:type=>"Book"}
+                         DELETE /books/:id(.:format)                                products#destroy {:type=>"Book"}
+                         GET    /games(.:format)                                    products#index {:type=>"Game"}
+                         POST   /games(.:format)                                    products#create {:type=>"Game"}
+                         GET    /games/new(.:format)                                products#new {:type=>"Game"}
+                         GET    /games/:id/edit(.:format)                           products#edit {:type=>"Game"}
+                         GET    /games/:id(.:format)                                products#show {:type=>"Game"}
+                         PATCH  /games/:id(.:format)                                products#update {:type=>"Game"}
+                         PUT    /games/:id(.:format)                                products#update {:type=>"Game"}
+                         DELETE /games/:id(.:format)                                products#destroy {:type=>"Game"}
+      show_products_page POST   /products/:product_id/categories/:id(.:format)      products#show_products_page
+             add_to_cart POST   /add_to_cart_path/:product_id(.:format)             carts#add_to_cart
+        new_user_session GET    /users/sign_in(.:format)                            devise/sessions#new
+            user_session POST   /users/sign_in(.:format)                            devise/sessions#create
+    destroy_user_session DELETE /users/sign_out(.:format)                           devise/sessions#destroy
+           user_password POST   /users/password(.:format)                           devise/passwords#create
+       new_user_password GET    /users/password/new(.:format)                       devise/passwords#new
+      edit_user_password GET    /users/password/edit(.:format)                      devise/passwords#edit
+                         PATCH  /users/password(.:format)                           devise/passwords#update
+                         PUT    /users/password(.:format)                           devise/passwords#update
+cancel_user_registration GET    /users/cancel(.:format)                             devise/registrations#cancel
+       user_registration POST   /users(.:format)                                    devise/registrations#create
+   new_user_registration GET    /users/sign_up(.:format)                            devise/registrations#new
+  edit_user_registration GET    /users/edit(.:format)                               devise/registrations#edit
+                         PATCH  /users(.:format)                                    devise/registrations#update
+                         PUT    /users(.:format)                                    devise/registrations#update
+                         DELETE /users(.:format)                                    devise/registrations#destroy

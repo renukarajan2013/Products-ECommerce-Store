@@ -1,28 +1,21 @@
 class MusicController < ApplicationController
 
 def show
-	redirect_to '#'
+  redirect_to '#'
 end
-
 
 def create
 end
 
-
-
 def update
-
-   @product= Product.find(params[:id])
-
-        @product.update(product_params)
-        redirect_to browse_path
+  @music=Music.find(params[:id])
+  @music.update(music_params)
+  redirect_to browse_url
 end
 
-
 private
-  def product_params
-    #params.require(:product).permit(:name ,:price, :category_id, :image)
-    params.require(:music).permit(:name ,:price, :image)
+  def music_params
+    params.require(:music).permit(:name ,:price, :type, :image1)
   end
 
 end
