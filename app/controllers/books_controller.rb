@@ -38,8 +38,8 @@ def update
 end
 
 private
-  def book_params
-    params.require(:book).permit(:name ,:author, :price)
+def book_params
+  params.require(:book).permit(:name ,:author, :price)
 end
 
 end
